@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NmB-xY-slq">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="czC-Ye-FvK">
+            <objects>
+                <viewController id="7Fl-pn-eBu" userLabel="Home View Controller" customClass="HomeViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zoj-Jy-hgz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UjU-ev-kkq" userLabel="Logo">
+                                <rect key="frame" x="0.0" y="100" width="40" height="40"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="商品搜寻" translatesAutoresizingMaskIntoConstraints="NO" id="ebR-zZ-OVc" userLabel="SearchBar">
+                                <rect key="frame" x="36" y="91.666666666666671" width="306" height="56.000000000000014"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSU-hO-gYZ" userLabel="Search">
+                                <rect key="frame" x="347" y="83" width="31" height="73"/>
+                                <state key="normal" title="搜寻">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchProduct" destination="7Fl-pn-eBu" eventType="touchUpInside" id="6MX-UY-L0B"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3d2-Tl-R8c">
+                                <rect key="frame" x="-36" y="222" width="447" height="32"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="xlv-rm-8ZL">
+                                        <rect key="frame" x="205" y="106" width="38" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="NfD-6H-X6p"/>
+                                        </constraints>
+                                    </pageControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xlv-rm-8ZL" firstAttribute="centerX" secondItem="3d2-Tl-R8c" secondAttribute="centerX" id="VDh-qN-M4f"/>
+                                    <constraint firstAttribute="bottom" secondItem="xlv-rm-8ZL" secondAttribute="bottom" constant="-111" id="ZoG-u3-bBD"/>
+                                    <constraint firstItem="xlv-rm-8ZL" firstAttribute="top" secondItem="3d2-Tl-R8c" secondAttribute="top" constant="106" id="iMM-Du-hS8"/>
+                                    <constraint firstAttribute="trailing" secondItem="xlv-rm-8ZL" secondAttribute="trailing" constant="168" id="xj5-cx-wim"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3d2-Tl-R8c" firstAttribute="top" secondItem="hv5-gb-f9J" secondAttribute="top" constant="63" id="5sh-Um-NUV"/>
+                            <constraint firstItem="ebR-zZ-OVc" firstAttribute="leading" secondItem="hv5-gb-f9J" secondAttribute="leading" constant="36" id="8op-PQ-ED7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LSU-hO-gYZ" secondAttribute="trailing" constant="-19" id="91B-vx-faa"/>
+                            <constraint firstItem="LSU-hO-gYZ" firstAttribute="centerY" secondItem="ebR-zZ-OVc" secondAttribute="centerY" id="G1Q-Up-zG5"/>
+                            <constraint firstItem="hv5-gb-f9J" firstAttribute="trailing" secondItem="ebR-zZ-OVc" secondAttribute="trailing" constant="33" id="H4K-LU-BdE"/>
+                            <constraint firstItem="UjU-ev-kkq" firstAttribute="leading" secondItem="Zoj-Jy-hgz" secondAttribute="leading" id="ISf-Sl-Tkx"/>
+                            <constraint firstItem="ebR-zZ-OVc" firstAttribute="centerY" secondItem="UjU-ev-kkq" secondAttribute="centerY" id="eRF-fT-ZUZ"/>
+                            <constraint firstItem="LSU-hO-gYZ" firstAttribute="top" secondItem="hv5-gb-f9J" secondAttribute="top" constant="39" id="erf-G3-I07"/>
+                            <constraint firstItem="LSU-hO-gYZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Zoj-Jy-hgz" secondAttribute="leadingMargin" id="fq8-t9-EGU"/>
+                            <constraint firstAttribute="trailing" secondItem="3d2-Tl-R8c" secondAttribute="trailing" constant="-218" id="gkN-l1-0mG"/>
+                            <constraint firstItem="hv5-gb-f9J" firstAttribute="bottom" secondItem="3d2-Tl-R8c" secondAttribute="bottom" constant="546" id="hph-36-ces"/>
+                            <constraint firstItem="UjU-ev-kkq" firstAttribute="top" secondItem="hv5-gb-f9J" secondAttribute="top" constant="20" id="sag-pd-9fd"/>
+                            <constraint firstItem="3d2-Tl-R8c" firstAttribute="leading" secondItem="UjU-ev-kkq" secondAttribute="trailing" constant="34" id="tXd-BH-QLP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hv5-gb-f9J"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="首页" image="home" selectedImage="home_selected" id="4Jk-AT-Xj6" userLabel="Home"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bannerPageControl" destination="xlv-rm-8ZL" id="9yR-x5-r7u"/>
+                        <outlet property="bannerScrollview" destination="3d2-Tl-R8c" id="qXo-jf-Tqh"/>
+                        <outlet property="searchBar" destination="ebR-zZ-OVc" id="jSk-6g-7WT"/>
+                        <outlet property="searchBtn" destination="LSU-hO-gYZ" id="GGU-FX-jWI"/>
+                        <outlet property="searchLogo" destination="UjU-ev-kkq" id="Phd-RH-hiG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="23p-0n-J21" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-389.60000000000002" y="-2258.3208395802098"/>
+        </scene>
+        <!--Category View Controller-->
+        <scene sceneID="Hxo-Qd-p7t">
+            <objects>
+                <viewController id="MjN-YB-meA" userLabel="Category View Controller" customClass="CategoryViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vLf-fA-ASm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="608-ev-gou"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="分类" image="category" selectedImage="category_selected" id="gjp-HB-JEG" userLabel="Category"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8v9-kO-dGx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-384" y="-1559"/>
+        </scene>
+        <!--Shopping Cart View Controller-->
+        <scene sceneID="5QX-7o-nn1">
+            <objects>
+                <viewController id="qB4-YS-1Ny" userLabel="Shopping Cart View Controller" customClass="ShoppingCartViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RYs-aF-vAa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ptz-Y2-WWQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="购物车" image="cart" selectedImage="cart_selected" id="mAc-K3-L8Z" userLabel="ShoppingCart"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u1q-nj-g25" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-384" y="-846"/>
+        </scene>
+        <!--Mine View Controller-->
+        <scene sceneID="3vc-XC-A3N">
+            <objects>
+                <viewController id="4Km-HJ-E76" userLabel="Mine View Controller" customClass="MineViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FQo-bB-Vcf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="raa-7D-wzg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="我的" image="mine" selectedImage="mine_selected" id="YE6-Rh-gVd" userLabel="Mine"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FEu-9P-xrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-384" y="-160"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="GTf-yZ-seM">
+            <objects>
+                <tabBarController id="NmB-xY-slq" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8tN-Pz-PrP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7Fl-pn-eBu" kind="relationship" relationship="viewControllers" id="ZRO-8M-SaZ"/>
+                        <segue destination="MjN-YB-meA" kind="relationship" relationship="viewControllers" id="pkK-nG-qg1"/>
+                        <segue destination="qB4-YS-1Ny" kind="relationship" relationship="viewControllers" id="kQa-pP-yeB"/>
+                        <segue destination="4Km-HJ-E76" kind="relationship" relationship="viewControllers" id="D3S-Qf-NMH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l2u-Wu-AEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2143" y="-411"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cart" width="29" height="27"/>
+        <image name="cart_selected" width="29" height="27"/>
+        <image name="category" width="29" height="27"/>
+        <image name="category_selected" width="29" height="27"/>
+        <image name="home" width="29" height="27"/>
+        <image name="home_selected" width="29" height="27"/>
+        <image name="logo" width="112" height="111"/>
+        <image name="mine" width="29" height="27"/>
+        <image name="mine_selected" width="29" height="27"/>
+    </resources>
+</document>
