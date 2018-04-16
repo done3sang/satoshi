@@ -8,21 +8,23 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UISearchBarDelegate, UIScrollViewDelegate {
+class HomeViewController: UIViewController, UISearchBarDelegate, AutoPageControlDelegate {
     @IBOutlet var searchBar: UISearchBar!
-    @IBOutlet var searchBtn: UIButton!
     @IBOutlet var searchLogo: UIImageView!
-    @IBOutlet var bannerScrollview: UIScrollView!
+    @IBOutlet var bannerScrollView: UIScrollView!
     @IBOutlet var bannerPageControl: UIPageControl!
+    
     var searchBackgroudView: UIView?
     var searchEditing = false
+    var bannerPageScroll: AutoPageScroll?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        let attr = [NSAttributedStringKey.foregroundColor: UIColor.orange]
+        tabBarItem.setTitleTextAttributes(attr, for: UIControlState.selected)
         searchBar.delegate = self
-        bannerScrollview.delegate = self
         initPageScroll()
     }
 
@@ -32,37 +34,17 @@ class HomeViewController: UIViewController, UISearchBarDelegate, UIScrollViewDel
     }
 
     private func initPageScroll() {
-        bannerScrollview.isPagingEnabled = true
-        bannerScrollview.bounces = false
-        let slidedImages = ["banner_0", "banner_1"]
-        let contentSize = bannerScrollview.contentSize
-        var xpos = CGFloat()
-        for imageName in slidedImages {
-            let imageView = UIImageView(image: UIImage(named: imageName))
-            imageView.frame = CGRect(x: xpos * contentSize.width, y: 0,
-                                     width: contentSize.width, height: contentSize.height)
-            xpos = xpos + 1.0
-            bannerScrollview.addSubview(imageView)
-        }
-        bannerPageControl.numberOfPages = slidedImages.count
+        bannerPageScroll = AutoPageScroll(scrollView: bannerScrollView, pageControl: bannerPageControl)
+        bannerPageScroll?.delegate = self
+        bannerPageScroll?.setNamedImages(images: ["banner1", "banner2"])
+        bannerPageScroll?.startAnimating()
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let currentPage = Int(scrollView.contentOffset.x/scrollView.contentSize.width)
-        
+    func pageClicked(pageNum: Int) {
+        print("--------page click \(pageNum)")
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let page = Int(scrollView.contentOffset.x/scrollView.contentSize.width) + 1
-        bannerPageControl.currentPage = page
-    }
-    
-    @IBAction func pageAction(_ pageControl: UIPageControl) {
-        let page = CGFloat(pageControl.currentPage - 1)
-        bannerScrollview.setContentOffset(CGPoint(x: page * bannerScrollview.contentSize.width, y: 0), animated: true)
-    }
-    
-    @IBAction func searchProduct() {
+    private func searchProduct() {
         if searchEditing {
             finishSearchEditing(searchBar)
         }
@@ -80,7 +62,6 @@ class HomeViewController: UIViewController, UISearchBarDelegate, UIScrollViewDel
         self.view.addSubview(searchBackgroudView!)
         self.view.bringSubview(toFront: searchLogo)
         self.view.bringSubview(toFront: searchBar)
-        self.view.bringSubview(toFront: searchBtn)
     }
     
     @objc func tapSearchBackground() {

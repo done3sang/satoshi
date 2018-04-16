@@ -13,13 +13,14 @@ class MineViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        let attr = [NSAttributedStringKey.foregroundColor: UIColor.orange]
+        tabBarItem.setTitleTextAttributes(attr, for: UIControlState.selected)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

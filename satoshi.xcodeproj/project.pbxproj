@@ -16,6 +16,7 @@
 		141F2C2C20805D9500DC01CB /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141F2C2B20805D9500DC01CB /* CategoryViewController.swift */; };
 		141F2C2E20805DA500DC01CB /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141F2C2D20805DA500DC01CB /* ShoppingCartViewController.swift */; };
 		141F2C3020805DAF00DC01CB /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141F2C2F20805DAF00DC01CB /* MineViewController.swift */; };
+		14D3714D2084B3C20012670F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D3714C2084B3C20012670F /* Utility.swift */; };
 		14DA99E22080AFEC00D3BDDD /* AutoPageScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA99E12080AFEC00D3BDDD /* AutoPageScroll.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		141F2C2B20805D9500DC01CB /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		141F2C2D20805DA500DC01CB /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		141F2C2F20805DAF00DC01CB /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		14D3714C2084B3C20012670F /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		14DA99E12080AFEC00D3BDDD /* AutoPageScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoPageScroll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 				141F2C2D20805DA500DC01CB /* ShoppingCartViewController.swift */,
 				141F2C2F20805DAF00DC01CB /* MineViewController.swift */,
 				14DA99E12080AFEC00D3BDDD /* AutoPageScroll.swift */,
+				14D3714C2084B3C20012670F /* Utility.swift */,
 				141F2BD0207F504E00DC01CB /* Main.storyboard */,
 				141F2BD3207F505700DC01CB /* Assets.xcassets */,
 				141F2BD5207F505700DC01CB /* LaunchScreen.storyboard */,
@@ -162,6 +165,7 @@
 				141F2BCF207F504E00DC01CB /* ViewController.swift in Sources */,
 				14DA99E22080AFEC00D3BDDD /* AutoPageScroll.swift in Sources */,
 				141F2BCD207F504E00DC01CB /* AppDelegate.swift in Sources */,
+				14D3714D2084B3C20012670F /* Utility.swift in Sources */,
 				141F2C2A20805D7B00DC01CB /* HomeViewController.swift in Sources */,
 				141F2C2E20805DA500DC01CB /* ShoppingCartViewController.swift in Sources */,
 				141F2C3020805DAF00DC01CB /* MineViewController.swift in Sources */,

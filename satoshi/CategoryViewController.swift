@@ -14,6 +14,8 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let attr = [NSAttributedStringKey.foregroundColor: UIColor.orange]
+        tabBarItem.setTitleTextAttributes(attr, for: UIControlState.selected)
     }
 
     override func didReceiveMemoryWarning() {
