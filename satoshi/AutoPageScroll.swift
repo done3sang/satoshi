@@ -107,7 +107,7 @@ class AutoPageScroll: NSObject, UIScrollViewDelegate {
     }
     
     func addImage(imageName: String, pageNum: Int) {
-        let image = Utility.scaleImageWithWidthFactor(image: UIImage(named: imageName)!, newSize: scrollView.frame.size)
+        let image = Utility.scaleImage(image: UIImage(named: imageName)!, newSize: scrollView.frame.size)
         let imageView = UIImageView(image: image)
         let rect = CGRect(x: CGFloat(pageNum) * scrollView.frame.width, y: 0, width: scrollView.frame.width, height: scrollView.frame.height)
         imageView.frame = rect

@@ -38,16 +38,18 @@ class HomeViewController: UIViewController, UISearchBarDelegate, AutoPageControl
         // Dispose of any resources that can be recreated.
     }
 
-    private func initMainScrollView() {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         var contentRect = CGRect.zero
         for view in mainScrollView.subviews {
             contentRect = contentRect.union(view.frame)
         }
         contentRect.size.height = contentRect.height
-        mainScrollView.contentSize = CGSize(width: contentRect.size.width, height: contentRect.size.height + 525)
-        
-        mainStackView.backgroundColor = UIColor.white
-        
+        mainScrollView.contentSize = CGSize(width: contentRect.size.width, height: contentRect.size.height)
+    }
+    
+    private func initMainScrollView() {
         buyWiFiButton.imageView?.layer.borderWidth = 4
         buyWiFiButton.imageView?.layer.borderColor = UIColor.white.cgColor
         buyTrafficButton.imageView?.layer.borderWidth = 4

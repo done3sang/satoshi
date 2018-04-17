@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "buywifi@2x.jpg",
-      "scale" : "2x"
+      "filename" : "buywifi.jpg",
+      "scale" : "1x"
     }
   ],
   "info" : {

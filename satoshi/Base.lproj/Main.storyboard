@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NmB-xY-slq">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,47 +16,47 @@
             <objects>
                 <viewController id="7Fl-pn-eBu" userLabel="Home View Controller" customClass="HomeViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zoj-Jy-hgz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="UjU-ev-kkq" userLabel="Logo">
-                                <rect key="frame" x="0.0" y="28" width="40" height="40"/>
+                                <rect key="frame" x="0.0" y="52" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="aPC-n1-iM7"/>
                                     <constraint firstAttribute="width" constant="40" id="go1-GW-BAc"/>
                                 </constraints>
                             </imageView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="商品搜尋" translatesAutoresizingMaskIntoConstraints="NO" id="ebR-zZ-OVc" userLabel="SearchBar">
-                                <rect key="frame" x="40" y="20" width="280" height="56"/>
+                                <rect key="frame" x="40" y="44" width="335" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuB-7q-Ass" userLabel="HomeScrollView">
-                                <rect key="frame" x="0.0" y="76" width="320" height="399"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="585"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50p-kC-bxc" userLabel="BannerScrollView">
-                                        <rect key="frame" x="10" y="0.0" width="300" height="83"/>
+                                        <rect key="frame" x="38" y="0.0" width="299" height="119.66666666666667"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="dRY-JE-WIY"/>
+                                            <constraint firstAttribute="width" secondItem="50p-kC-bxc" secondAttribute="height" multiplier="5:2" id="DfH-NN-fgs"/>
                                         </constraints>
                                     </scrollView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="A0A-6f-RBV" userLabel="BannerPageControl">
-                                        <rect key="frame" x="141" y="46" width="39" height="37"/>
+                                        <rect key="frame" x="168.66666666666666" y="82.666666666666657" width="39" height="37"/>
                                         <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="currentPageIndicatorTintColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                                     </pageControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SsE-Md-lkt" userLabel="MainStackView">
-                                        <rect key="frame" x="0.0" y="88" width="319" height="84"/>
+                                        <rect key="frame" x="0.0" y="124.66666666666666" width="375" height="84"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xTI-qu-IK8" userLabel="WifiStackView">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="84"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="84"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNI-lG-nM7" userLabel="WiFiButton">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="64"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="64"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="wifi"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WiFi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbD-uI-rLK" userLabel="WiFiLabel">
-                                                        <rect key="frame" x="0.0" y="64" width="80" height="20"/>
+                                                        <rect key="frame" x="0.0" y="64.000000000000028" width="93.666666666666671" height="20"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -68,15 +69,15 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7l5-Y5-YhN" userLabel="HotelStackView">
-                                                <rect key="frame" x="80" y="0.0" width="79.5" height="84"/>
+                                                <rect key="frame" x="93.666666666666686" y="0.0" width="94" height="84"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZv-B0-gV8" userLabel="HotelButton">
-                                                        <rect key="frame" x="0.0" y="0.0" width="79.5" height="64"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="94" height="64"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="hotel"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="酒店" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g53-IL-ApZ" userLabel="HotelLabel">
-                                                        <rect key="frame" x="0.0" y="64" width="79.5" height="20"/>
+                                                        <rect key="frame" x="0.0" y="64.000000000000028" width="94" height="20"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -88,15 +89,15 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y6x-EL-Px7" userLabel="TicketStackView">
-                                                <rect key="frame" x="159.5" y="0.0" width="80" height="84"/>
+                                                <rect key="frame" x="187.66666666666666" y="0.0" width="93.666666666666657" height="84"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytV-bV-2cd" userLabel="TicketButton">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="64"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="64"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="ticket"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="票卷" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVt-gM-6eE" userLabel="TicketLabel">
-                                                        <rect key="frame" x="0.0" y="64" width="80" height="20"/>
+                                                        <rect key="frame" x="0.0" y="64.000000000000028" width="93.666666666666671" height="20"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -108,15 +109,15 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xbb-Fd-NAi" userLabel="MallStackView">
-                                                <rect key="frame" x="239.5" y="0.0" width="79.5" height="84"/>
+                                                <rect key="frame" x="281.33333333333331" y="0.0" width="93.666666666666686" height="84"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHp-da-OYw" userLabel="MallButton">
-                                                        <rect key="frame" x="0.0" y="0.0" width="79.5" height="64"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="64"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="mall"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商城" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1k5-5Q-kDq" userLabel="MallLabel">
-                                                        <rect key="frame" x="0.0" y="64" width="79.5" height="20"/>
+                                                        <rect key="frame" x="0.0" y="64.000000000000028" width="93.666666666666671" height="20"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -133,34 +134,49 @@
                                             <constraint firstAttribute="height" constant="84" id="o1v-u1-GOU"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiY-cj-9A3" userLabel="BuyWiFiButton">
-                                        <rect key="frame" x="0.0" y="182" width="319" height="211"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiY-cj-9A3" userLabel="BuyWiFiButton">
+                                        <rect key="frame" x="0.0" y="213.66666666666669" width="375" height="210.66666666666669"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="NiY-cj-9A3" secondAttribute="height" multiplier="750:422" id="LOa-P1-OHe"/>
+                                        </constraints>
                                         <state key="normal" image="buywifi"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8g-l8-V3N" userLabel="BuyTrafficButton">
-                                        <rect key="frame" x="0.0" y="401" width="319" height="211"/>
+                                        <rect key="frame" x="0.0" y="424.33333333333337" width="375" height="211"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="J8g-l8-V3N" secondAttribute="height" multiplier="750:422" id="qVq-DF-Peo"/>
+                                        </constraints>
+                                        <state key="normal" image="buytraffic"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDt-VL-rA6" userLabel="TestButton">
+                                        <rect key="frame" x="0.0" y="635.33333333333337" width="375" height="211"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="UDt-VL-rA6" secondAttribute="height" multiplier="750:422" id="T4r-IS-ah2"/>
+                                        </constraints>
                                         <state key="normal" image="buytraffic"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="SsE-Md-lkt" firstAttribute="top" secondItem="50p-kC-bxc" secondAttribute="bottom" constant="5" id="42z-Wv-uec"/>
-                                    <constraint firstItem="A0A-6f-RBV" firstAttribute="centerX" secondItem="RuB-7q-Ass" secondAttribute="centerX" id="5PA-gh-Tdi"/>
-                                    <constraint firstItem="A0A-6f-RBV" firstAttribute="top" secondItem="RuB-7q-Ass" secondAttribute="top" constant="46" id="6Vh-Ln-Rlv"/>
-                                    <constraint firstAttribute="bottom" secondItem="50p-kC-bxc" secondAttribute="bottom" constant="465" id="6ty-zg-9lW"/>
-                                    <constraint firstItem="50p-kC-bxc" firstAttribute="top" secondItem="RuB-7q-Ass" secondAttribute="top" id="AIp-Lr-bf2"/>
-                                    <constraint firstAttribute="trailing" secondItem="SsE-Md-lkt" secondAttribute="trailing" id="AIz-sh-Ais"/>
-                                    <constraint firstItem="J8g-l8-V3N" firstAttribute="leading" secondItem="RuB-7q-Ass" secondAttribute="leading" id="Eq9-or-G1K"/>
-                                    <constraint firstItem="NiY-cj-9A3" firstAttribute="top" secondItem="SsE-Md-lkt" secondAttribute="bottom" constant="10" id="Htd-Hu-FTQ"/>
-                                    <constraint firstItem="J8g-l8-V3N" firstAttribute="trailing" secondItem="RuB-7q-Ass" secondAttribute="trailing" id="J4g-iH-OeK"/>
-                                    <constraint firstItem="NiY-cj-9A3" firstAttribute="leading" secondItem="RuB-7q-Ass" secondAttribute="leading" id="KBc-oa-EoO"/>
-                                    <constraint firstItem="SsE-Md-lkt" firstAttribute="leading" secondItem="RuB-7q-Ass" secondAttribute="leading" id="P1f-W9-veq"/>
-                                    <constraint firstItem="SsE-Md-lkt" firstAttribute="centerX" secondItem="RuB-7q-Ass" secondAttribute="centerX" id="SJw-1W-9Fz"/>
-                                    <constraint firstItem="J8g-l8-V3N" firstAttribute="top" secondItem="NiY-cj-9A3" secondAttribute="bottom" constant="8" symbolic="YES" id="Sga-Bg-h1U"/>
-                                    <constraint firstItem="A0A-6f-RBV" firstAttribute="bottom" secondItem="50p-kC-bxc" secondAttribute="bottom" id="aUf-79-sJo"/>
-                                    <constraint firstItem="NiY-cj-9A3" firstAttribute="trailing" secondItem="RuB-7q-Ass" secondAttribute="trailing" id="jdw-CH-uQD"/>
-                                    <constraint firstItem="50p-kC-bxc" firstAttribute="centerX" secondItem="A0A-6f-RBV" secondAttribute="centerX" id="lCA-Mx-Ubd"/>
-                                    <constraint firstItem="50p-kC-bxc" firstAttribute="bottom" secondItem="A0A-6f-RBV" secondAttribute="bottom" id="qhg-hd-a2k"/>
+                                    <constraint firstAttribute="bottom" secondItem="50p-kC-bxc" secondAttribute="bottom" constant="432" id="03G-tk-GDU"/>
+                                    <constraint firstItem="UDt-VL-rA6" firstAttribute="top" secondItem="J8g-l8-V3N" secondAttribute="bottom" id="6uR-FN-iSH"/>
+                                    <constraint firstItem="50p-kC-bxc" firstAttribute="centerX" secondItem="RuB-7q-Ass" secondAttribute="centerX" id="Ad6-YI-4jx"/>
+                                    <constraint firstItem="J8g-l8-V3N" firstAttribute="top" secondItem="NiY-cj-9A3" secondAttribute="bottom" id="DqG-KK-zwt"/>
+                                    <constraint firstItem="J8g-l8-V3N" firstAttribute="width" secondItem="RuB-7q-Ass" secondAttribute="width" id="EWN-XP-KFn"/>
+                                    <constraint firstItem="A0A-6f-RBV" firstAttribute="bottom" secondItem="50p-kC-bxc" secondAttribute="bottom" id="Edt-Ln-Awi"/>
+                                    <constraint firstItem="50p-kC-bxc" firstAttribute="top" secondItem="RuB-7q-Ass" secondAttribute="top" id="EnC-yy-ORj"/>
+                                    <constraint firstItem="SsE-Md-lkt" firstAttribute="top" secondItem="50p-kC-bxc" secondAttribute="bottom" constant="5" id="GeL-59-guL"/>
+                                    <constraint firstItem="NiY-cj-9A3" firstAttribute="top" secondItem="SsE-Md-lkt" secondAttribute="bottom" constant="5" id="K9g-ly-tJQ"/>
+                                    <constraint firstItem="A0A-6f-RBV" firstAttribute="centerX" secondItem="RuB-7q-Ass" secondAttribute="centerX" id="LHb-ke-KEu"/>
+                                    <constraint firstItem="NiY-cj-9A3" firstAttribute="centerX" secondItem="RuB-7q-Ass" secondAttribute="centerX" id="Lj6-29-2l1"/>
+                                    <constraint firstItem="50p-kC-bxc" firstAttribute="centerX" secondItem="SsE-Md-lkt" secondAttribute="centerX" id="cPV-Sb-5RG"/>
+                                    <constraint firstItem="J8g-l8-V3N" firstAttribute="centerX" secondItem="RuB-7q-Ass" secondAttribute="centerX" id="e7J-lc-i9r"/>
+                                    <constraint firstItem="UDt-VL-rA6" firstAttribute="width" secondItem="RuB-7q-Ass" secondAttribute="width" id="fRC-j6-Z4Z"/>
+                                    <constraint firstItem="UDt-VL-rA6" firstAttribute="centerX" secondItem="RuB-7q-Ass" secondAttribute="centerX" id="jaS-yn-PKv"/>
+                                    <constraint firstAttribute="trailing" secondItem="50p-kC-bxc" secondAttribute="trailing" constant="38" id="kap-bN-1iU"/>
+                                    <constraint firstItem="SsE-Md-lkt" firstAttribute="width" secondItem="RuB-7q-Ass" secondAttribute="width" id="lKV-0I-eZz"/>
+                                    <constraint firstItem="NiY-cj-9A3" firstAttribute="width" secondItem="RuB-7q-Ass" secondAttribute="width" id="rKn-sY-IXt"/>
+                                    <constraint firstItem="50p-kC-bxc" firstAttribute="leading" secondItem="RuB-7q-Ass" secondAttribute="leading" constant="38" id="t4F-zI-thM"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -173,6 +189,7 @@
                             <constraint firstItem="UjU-ev-kkq" firstAttribute="centerY" secondItem="ebR-zZ-OVc" secondAttribute="centerY" id="ROg-VA-nqm"/>
                             <constraint firstItem="ebR-zZ-OVc" firstAttribute="top" secondItem="hv5-gb-f9J" secondAttribute="top" id="a3M-ap-PDW"/>
                             <constraint firstItem="RuB-7q-Ass" firstAttribute="leading" secondItem="hv5-gb-f9J" secondAttribute="leading" id="e8q-8H-eeP"/>
+                            <constraint firstItem="RuB-7q-Ass" firstAttribute="width" secondItem="hv5-gb-f9J" secondAttribute="width" id="lgH-kh-Osu"/>
                             <constraint firstItem="RuB-7q-Ass" firstAttribute="top" secondItem="ebR-zZ-OVc" secondAttribute="bottom" id="rtU-Jo-AeC"/>
                             <constraint firstItem="RuB-7q-Ass" firstAttribute="bottom" secondItem="hv5-gb-f9J" secondAttribute="bottom" id="vcB-ml-pXK"/>
                         </constraints>
@@ -194,14 +211,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23p-0n-J21" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-394.39999999999998" y="-2261.8226600985222"/>
+            <point key="canvasLocation" x="-396" y="-2262.5615763546798"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="Hxo-Qd-p7t">
             <objects>
                 <viewController id="MjN-YB-meA" userLabel="Category View Controller" customClass="CategoryViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vLf-fA-ASm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="608-ev-gou"/>
@@ -217,7 +234,7 @@
             <objects>
                 <viewController id="qB4-YS-1Ny" userLabel="Shopping Cart View Controller" customClass="ShoppingCartViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RYs-aF-vAa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ptz-Y2-WWQ"/>
@@ -233,7 +250,7 @@
             <objects>
                 <viewController id="4Km-HJ-E76" userLabel="Mine View Controller" customClass="MineViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FQo-bB-Vcf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="raa-7D-wzg"/>
@@ -266,8 +283,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="buytraffic" width="375" height="211"/>
-        <image name="buywifi" width="375" height="211"/>
+        <image name="buytraffic" width="750" height="422"/>
+        <image name="buywifi" width="750" height="422"/>
         <image name="cart" width="29" height="27"/>
         <image name="cart_selected" width="29" height="27"/>
         <image name="category" width="29" height="27"/>
