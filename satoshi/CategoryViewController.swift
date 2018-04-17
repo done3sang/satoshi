@@ -8,16 +8,51 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController {
-
+class CategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet var tableView: UITableView!
+    
+    var tabItems = ["WiFi", "美妝", "箱包", "流量", "日租"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         let attr = [NSAttributedStringKey.foregroundColor: UIColor.orange]
         tabBarItem.setTitleTextAttributes(attr, for: UIControlState.selected)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tabItems.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let identifier = "ReusedCell"
+        var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
+        
+        if(nil == cell) {
+            cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: identifier)
+        }
+        
+        cell?.backgroundColor = UIColor.lightGray
+        cell?.selectionStyle = UITableViewCellSelectionStyle.none
+        cell?.textLabel?.text = tabItems[indexPath.row]
+        
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.backgroundColor = UIColor.white
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.backgroundColor = UIColor.lightGray
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
