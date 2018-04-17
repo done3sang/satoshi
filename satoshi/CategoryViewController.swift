@@ -8,9 +8,9 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet var tableView: UITableView!
-    
+    @IBOutlet var collectionView: UICollectionView!
     var tabItems = ["WiFi", "美妝", "箱包", "流量", "日租"]
     
     override func viewDidLoad() {
@@ -22,8 +22,21 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         
         tableView.delegate = self
         tableView.dataSource = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
 
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let identifier = "ReusedCell"
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
+        
+        return cell
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tabItems.count
     }
@@ -39,6 +52,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         cell?.backgroundColor = UIColor.lightGray
         cell?.selectionStyle = UITableViewCellSelectionStyle.none
         cell?.textLabel?.text = tabItems[indexPath.row]
+        cell?.textLabel?.textAlignment = NSTextAlignment.center
         
         return cell!
     }
