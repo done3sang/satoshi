@@ -13,6 +13,10 @@ class HomeViewController: UIViewController, UISearchBarDelegate, AutoPageControl
     @IBOutlet var searchLogo: UIImageView!
     @IBOutlet var bannerScrollView: UIScrollView!
     @IBOutlet var bannerPageControl: UIPageControl!
+    @IBOutlet var mainScrollView: UIScrollView!
+    @IBOutlet var buyWiFiButton: UIButton!
+    @IBOutlet var buyTrafficButton: UIButton!
+    @IBOutlet var mainStackView: UIStackView!
     
     var searchBackgroudView: UIView?
     var searchEditing = false
@@ -26,13 +30,30 @@ class HomeViewController: UIViewController, UISearchBarDelegate, AutoPageControl
         tabBarItem.setTitleTextAttributes(attr, for: UIControlState.selected)
         searchBar.delegate = self
         initPageScroll()
+        initMainScrollView()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    private func initMainScrollView() {
+        var contentRect = CGRect.zero
+        for view in mainScrollView.subviews {
+            contentRect = contentRect.union(view.frame)
+        }
+        contentRect.size.height = contentRect.height
+        mainScrollView.contentSize = CGSize(width: contentRect.size.width, height: contentRect.size.height + 525)
+        
+        mainStackView.backgroundColor = UIColor.white
+        
+        buyWiFiButton.imageView?.layer.borderWidth = 4
+        buyWiFiButton.imageView?.layer.borderColor = UIColor.white.cgColor
+        buyTrafficButton.imageView?.layer.borderWidth = 4
+        buyTrafficButton.imageView?.layer.borderColor = UIColor.white.cgColor
+    }
+    
     private func initPageScroll() {
         bannerPageScroll = AutoPageScroll(scrollView: bannerScrollView, pageControl: bannerPageControl)
         bannerPageScroll?.delegate = self
@@ -49,8 +70,7 @@ class HomeViewController: UIViewController, UISearchBarDelegate, AutoPageControl
             finishSearchEditing(searchBar)
         }
         
-        let productName = searchBar.text!
-        print("----search product \(productName)")
+        //let productName = searchBar.text!
     }
     
     func beginSearchEditing() {

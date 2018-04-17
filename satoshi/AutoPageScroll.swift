@@ -18,13 +18,18 @@ class AutoPageScroll: NSObject, UIScrollViewDelegate {
     var pageControl: UIPageControl!
     var namedImages: [String] = []
     var delegate: AutoPageControlDelegate?
-    lazy var animeTimer: Timer? = nil
+    var frameWidth: CGFloat = 0
+    var frameHeight: CGFloat = 0
+    var animeTimer: Timer?
     
     init(scrollView: UIScrollView, pageControl: UIPageControl) {
         super.init()
         
         self.scrollView = scrollView
         self.pageControl = pageControl
+        self.frameWidth = scrollView.frame.width
+        self.frameHeight = scrollView.frame.height
+        self.animeTimer = Timer(timeInterval: 2, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         
         self.scrollView.isPagingEnabled = true
         self.scrollView.bounces = false
@@ -38,9 +43,12 @@ class AutoPageScroll: NSObject, UIScrollViewDelegate {
         self.pageControl.addTarget(self, action: #selector(pageChanged), for: UIControlEvents.valueChanged)
     }
     
+    deinit {
+        clear()
+    }
+    
     func startAnimating() {
-        if nil == animeTimer {
-            animeTimer = Timer(timeInterval: 2, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        if nil != animeTimer {
             RunLoop.main.add(animeTimer!, forMode: RunLoopMode.defaultRunLoopMode)
         }
     }
@@ -61,13 +69,8 @@ class AutoPageScroll: NSObject, UIScrollViewDelegate {
         if nextPage >= namedImages.count {
             nextPage = 0
         }
-        var rect = scrollView.frame
-        rect.origin.x = rect.width * CGFloat(nextPage)
-        rect.origin.y = 0
-        //scrollView.scrollRectToVisible(rect, animated: true)
-        
-        let offsetX = CGFloat(nextPage) * scrollView.frame.width
-        scrollView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
+        let rect = CGRect(x: frameWidth * CGFloat(nextPage), y: 0, width: frameWidth, height: frameHeight)
+        scrollView.scrollRectToVisible(rect, animated: true)
         pageControl.currentPage = nextPage
     }
     
@@ -100,15 +103,14 @@ class AutoPageScroll: NSObject, UIScrollViewDelegate {
             addImage(imageName: name, pageNum: seq)
         }
         
-        scrollView.contentSize = CGSize(width: CGFloat(namedImages.count) * scrollView.frame.width, height: scrollView.frame.height)
+        scrollView.contentSize = CGSize(width: CGFloat(namedImages.count) * frameWidth, height: frameHeight)
     }
     
     func addImage(imageName: String, pageNum: Int) {
-        let image = Utility.scaleImageWithoutFactor(image: UIImage(named: imageName)!, newSize: scrollView.frame.size)
+        let image = Utility.scaleImageWithWidthFactor(image: UIImage(named: imageName)!, newSize: scrollView.frame.size)
         let imageView = UIImageView(image: image)
         let rect = CGRect(x: CGFloat(pageNum) * scrollView.frame.width, y: 0, width: scrollView.frame.width, height: scrollView.frame.height)
         imageView.frame = rect
-        
         imageView.tag = pageNum
         imageView.isUserInteractionEnabled = true
         

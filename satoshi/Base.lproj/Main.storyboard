@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NmB-xY-slq">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="7Fl-pn-eBu" userLabel="Home View Controller" customClass="HomeViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zoj-Jy-hgz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="UjU-ev-kkq" userLabel="Logo">
@@ -29,29 +29,138 @@
                                 <rect key="frame" x="40" y="20" width="280" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuB-7q-Ass" userLabel="HomeScrollView">
-                                <rect key="frame" x="0.0" y="76" width="320" height="311"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuB-7q-Ass" userLabel="HomeScrollView">
+                                <rect key="frame" x="0.0" y="76" width="320" height="399"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50p-kC-bxc" userLabel="BannerScrollView">
-                                        <rect key="frame" x="38" y="0.0" width="243" height="120"/>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50p-kC-bxc" userLabel="BannerScrollView">
+                                        <rect key="frame" x="10" y="0.0" width="300" height="83"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="Fxg-16-dQJ"/>
+                                            <constraint firstAttribute="width" constant="300" id="dRY-JE-WIY"/>
                                         </constraints>
                                     </scrollView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="A0A-6f-RBV" userLabel="BannerPageControl">
-                                        <rect key="frame" x="140.5" y="83" width="39" height="37"/>
+                                        <rect key="frame" x="141" y="46" width="39" height="37"/>
                                         <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="currentPageIndicatorTintColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                                     </pageControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SsE-Md-lkt" userLabel="MainStackView">
+                                        <rect key="frame" x="0.0" y="88" width="319" height="84"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xTI-qu-IK8" userLabel="WifiStackView">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="84"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNI-lG-nM7" userLabel="WiFiButton">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="64"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" image="wifi"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WiFi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbD-uI-rLK" userLabel="WiFiLabel">
+                                                        <rect key="frame" x="0.0" y="64" width="80" height="20"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="TNI-lG-nM7" secondAttribute="bottom" constant="20" symbolic="YES" id="ZAB-qE-cA9"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7l5-Y5-YhN" userLabel="HotelStackView">
+                                                <rect key="frame" x="80" y="0.0" width="79.5" height="84"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZv-B0-gV8" userLabel="HotelButton">
+                                                        <rect key="frame" x="0.0" y="0.0" width="79.5" height="64"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" image="hotel"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="酒店" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g53-IL-ApZ" userLabel="HotelLabel">
+                                                        <rect key="frame" x="0.0" y="64" width="79.5" height="20"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="xZv-B0-gV8" secondAttribute="bottom" constant="20" symbolic="YES" id="JBy-9F-ALo"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y6x-EL-Px7" userLabel="TicketStackView">
+                                                <rect key="frame" x="159.5" y="0.0" width="80" height="84"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytV-bV-2cd" userLabel="TicketButton">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="64"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" image="ticket"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="票卷" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVt-gM-6eE" userLabel="TicketLabel">
+                                                        <rect key="frame" x="0.0" y="64" width="80" height="20"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="ytV-bV-2cd" secondAttribute="bottom" constant="20" symbolic="YES" id="Q8Q-FN-IrP"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xbb-Fd-NAi" userLabel="MallStackView">
+                                                <rect key="frame" x="239.5" y="0.0" width="79.5" height="84"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHp-da-OYw" userLabel="MallButton">
+                                                        <rect key="frame" x="0.0" y="0.0" width="79.5" height="64"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" image="mall"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商城" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1k5-5Q-kDq" userLabel="MallLabel">
+                                                        <rect key="frame" x="0.0" y="64" width="79.5" height="20"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="rHp-da-OYw" secondAttribute="bottom" constant="20" symbolic="YES" id="7fG-Ls-PHU"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="84" id="o1v-u1-GOU"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiY-cj-9A3" userLabel="BuyWiFiButton">
+                                        <rect key="frame" x="0.0" y="182" width="319" height="211"/>
+                                        <state key="normal" image="buywifi"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8g-l8-V3N" userLabel="BuyTrafficButton">
+                                        <rect key="frame" x="0.0" y="401" width="319" height="211"/>
+                                        <state key="normal" image="buytraffic"/>
+                                    </button>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="50p-kC-bxc" secondAttribute="trailing" constant="38" id="2YF-Rb-h5U"/>
-                                    <constraint firstItem="A0A-6f-RBV" firstAttribute="bottom" secondItem="50p-kC-bxc" secondAttribute="bottom" id="2lN-Qj-AgV"/>
+                                    <constraint firstItem="SsE-Md-lkt" firstAttribute="top" secondItem="50p-kC-bxc" secondAttribute="bottom" constant="5" id="42z-Wv-uec"/>
                                     <constraint firstItem="A0A-6f-RBV" firstAttribute="centerX" secondItem="RuB-7q-Ass" secondAttribute="centerX" id="5PA-gh-Tdi"/>
-                                    <constraint firstItem="50p-kC-bxc" firstAttribute="leading" secondItem="RuB-7q-Ass" secondAttribute="leading" constant="38" id="Rui-MP-dPd"/>
-                                    <constraint firstAttribute="bottom" secondItem="50p-kC-bxc" secondAttribute="bottom" constant="465" id="ci3-RR-Eec"/>
-                                    <constraint firstItem="50p-kC-bxc" firstAttribute="centerX" secondItem="RuB-7q-Ass" secondAttribute="centerX" id="eHi-jy-9c8"/>
-                                    <constraint firstItem="50p-kC-bxc" firstAttribute="top" secondItem="RuB-7q-Ass" secondAttribute="top" id="n1I-TT-wPP"/>
+                                    <constraint firstItem="A0A-6f-RBV" firstAttribute="top" secondItem="RuB-7q-Ass" secondAttribute="top" constant="46" id="6Vh-Ln-Rlv"/>
+                                    <constraint firstAttribute="bottom" secondItem="50p-kC-bxc" secondAttribute="bottom" constant="465" id="6ty-zg-9lW"/>
+                                    <constraint firstItem="50p-kC-bxc" firstAttribute="top" secondItem="RuB-7q-Ass" secondAttribute="top" id="AIp-Lr-bf2"/>
+                                    <constraint firstAttribute="trailing" secondItem="SsE-Md-lkt" secondAttribute="trailing" id="AIz-sh-Ais"/>
+                                    <constraint firstItem="J8g-l8-V3N" firstAttribute="leading" secondItem="RuB-7q-Ass" secondAttribute="leading" id="Eq9-or-G1K"/>
+                                    <constraint firstItem="NiY-cj-9A3" firstAttribute="top" secondItem="SsE-Md-lkt" secondAttribute="bottom" constant="10" id="Htd-Hu-FTQ"/>
+                                    <constraint firstItem="J8g-l8-V3N" firstAttribute="trailing" secondItem="RuB-7q-Ass" secondAttribute="trailing" id="J4g-iH-OeK"/>
+                                    <constraint firstItem="NiY-cj-9A3" firstAttribute="leading" secondItem="RuB-7q-Ass" secondAttribute="leading" id="KBc-oa-EoO"/>
+                                    <constraint firstItem="SsE-Md-lkt" firstAttribute="leading" secondItem="RuB-7q-Ass" secondAttribute="leading" id="P1f-W9-veq"/>
+                                    <constraint firstItem="SsE-Md-lkt" firstAttribute="centerX" secondItem="RuB-7q-Ass" secondAttribute="centerX" id="SJw-1W-9Fz"/>
+                                    <constraint firstItem="J8g-l8-V3N" firstAttribute="top" secondItem="NiY-cj-9A3" secondAttribute="bottom" constant="8" symbolic="YES" id="Sga-Bg-h1U"/>
+                                    <constraint firstItem="A0A-6f-RBV" firstAttribute="bottom" secondItem="50p-kC-bxc" secondAttribute="bottom" id="aUf-79-sJo"/>
+                                    <constraint firstItem="NiY-cj-9A3" firstAttribute="trailing" secondItem="RuB-7q-Ass" secondAttribute="trailing" id="jdw-CH-uQD"/>
+                                    <constraint firstItem="50p-kC-bxc" firstAttribute="centerX" secondItem="A0A-6f-RBV" secondAttribute="centerX" id="lCA-Mx-Ubd"/>
+                                    <constraint firstItem="50p-kC-bxc" firstAttribute="bottom" secondItem="A0A-6f-RBV" secondAttribute="bottom" id="qhg-hd-a2k"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -75,20 +184,24 @@
                     <connections>
                         <outlet property="bannerPageControl" destination="A0A-6f-RBV" id="kst-Ru-I0B"/>
                         <outlet property="bannerScrollView" destination="50p-kC-bxc" id="1AC-KX-1yX"/>
+                        <outlet property="buyTrafficButton" destination="J8g-l8-V3N" id="mU8-Xv-PaT"/>
+                        <outlet property="buyWiFiButton" destination="NiY-cj-9A3" id="mLi-DR-zzF"/>
+                        <outlet property="mainScrollView" destination="RuB-7q-Ass" id="vE3-E5-Rcw"/>
+                        <outlet property="mainStackView" destination="SsE-Md-lkt" id="ZL7-AW-fid"/>
                         <outlet property="searchBar" destination="ebR-zZ-OVc" id="jSk-6g-7WT"/>
                         <outlet property="searchLogo" destination="UjU-ev-kkq" id="Phd-RH-hiG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23p-0n-J21" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-393.75" y="-2261.6197183098593"/>
+            <point key="canvasLocation" x="-394.39999999999998" y="-2261.8226600985222"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="Hxo-Qd-p7t">
             <objects>
                 <viewController id="MjN-YB-meA" userLabel="Category View Controller" customClass="CategoryViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vLf-fA-ASm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="608-ev-gou"/>
@@ -104,7 +217,7 @@
             <objects>
                 <viewController id="qB4-YS-1Ny" userLabel="Shopping Cart View Controller" customClass="ShoppingCartViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RYs-aF-vAa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ptz-Y2-WWQ"/>
@@ -120,7 +233,7 @@
             <objects>
                 <viewController id="4Km-HJ-E76" userLabel="Mine View Controller" customClass="MineViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FQo-bB-Vcf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="raa-7D-wzg"/>
@@ -153,14 +266,20 @@
         </scene>
     </scenes>
     <resources>
+        <image name="buytraffic" width="375" height="211"/>
+        <image name="buywifi" width="375" height="211"/>
         <image name="cart" width="29" height="27"/>
         <image name="cart_selected" width="29" height="27"/>
         <image name="category" width="29" height="27"/>
         <image name="category_selected" width="29" height="27"/>
         <image name="home" width="29" height="27"/>
         <image name="home_selected" width="29" height="27"/>
+        <image name="hotel" width="50" height="50"/>
         <image name="logo" width="112" height="111"/>
+        <image name="mall" width="50" height="50"/>
         <image name="mine" width="29" height="27"/>
         <image name="mine_selected" width="29" height="27"/>
+        <image name="ticket" width="50" height="50"/>
+        <image name="wifi" width="50" height="50"/>
     </resources>
 </document>
