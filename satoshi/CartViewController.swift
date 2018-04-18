@@ -1,5 +1,5 @@
 //
-//  ShoppingCartViewController.swift
+//  CartViewController.swift
 //  satoshi
 //
 //  Created by xy on 13/04/2018.
@@ -8,16 +8,17 @@
 
 import UIKit
 
-class ShoppingCartViewController: UIViewController {
-
+class CartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "購物車"
+        
         // Do any additional setup after loading the view.
         let attr = [NSAttributedStringKey.foregroundColor: UIColor.orange]
         tabBarItem.setTitleTextAttributes(attr, for: UIControlState.selected)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

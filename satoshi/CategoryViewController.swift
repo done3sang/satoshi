@@ -8,10 +8,12 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+class CategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var collectionView: UICollectionView!
+    
     var tabItems = ["WiFi", "美妝", "箱包", "流量", "日租"]
+    var selectedCategoryId = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +28,32 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         collectionView.dataSource = self
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        let indexPath = IndexPath(row: 0, section: 0)
+        let firstCell = tableView.cellForRow(at: indexPath)
+        tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableViewScrollPosition.none)
+        firstCell?.setSelected(true, animated: true)
+        didSelectCategory(categoryId: 0, categoryCell: firstCell!)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 20
     }
-    
+    /*
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.width/2.0
+        let height = width * 150/135
+        return CGSize(width: width, height: height)
+    }
+    */
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let identifier = "ReusedCell"
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
+        /*if let viewLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            let width = collectionView.frame.width/2.0
+            let height = width * 130/135
+            viewLayout.itemSize = CGSize(width: width, height: height)
+        }*/
         
         return cell
     }
@@ -59,12 +80,32 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
-        cell?.backgroundColor = UIColor.white
+        selectCategory(categoryId: indexPath.row, categoryCell: cell)
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.backgroundColor = UIColor.lightGray
+    }
+    
+    private func selectCategory(categoryId: Int, categoryCell: UITableViewCell?) {
+        print("--- categoryDidSelect = \(categoryId)")
+        if selectedCategoryId == categoryId && nil != categoryCell {
+            return
+        }
+        
+        var cell = categoryCell
+        if nil == cell {
+            cell = tableView.cellForRow(at: IndexPath(row: categoryId, section: 0))
+        }
+        
+        didSelectCategory(categoryId: categoryId, categoryCell: cell!)
+    }
+    
+    private func didSelectCategory(categoryId: Int, categoryCell: UITableViewCell) {
+        selectedCategoryId = categoryId
+        categoryCell.backgroundColor = UIColor.white
+        //collectionView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {

@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "商城"; ObjectID = "1k5-5Q-kDq"; */
+"1k5-5Q-kDq.text" = "商城";
+
+/* Class = "UITabBarItem"; title = "首頁"; ObjectID = "4Jk-AT-Xj6"; */
+"4Jk-AT-Xj6.title" = "首頁";
+
+/* Class = "UILabel"; text = "HKD799"; ObjectID = "GH7-6I-5V1"; */
+"GH7-6I-5V1.text" = "HKD799";
+
+/* Class = "UILabel"; text = "HKD999"; ObjectID = "GTA-d8-i2x"; */
+"GTA-d8-i2x.text" = "HKD999";
+
+/* Class = "UITabBarItem"; title = "我的"; ObjectID = "YE6-Rh-gVd"; */
+"YE6-Rh-gVd.title" = "我的";
+
+/* Class = "UILabel"; text = "GogoWifi WIFI蛋"; ObjectID = "d5K-x8-Lfj"; */
+"d5K-x8-Lfj.text" = "GogoWifi WIFI蛋";
+
+/* Class = "UILabel"; text = "WiFi"; ObjectID = "dbD-uI-rLK"; */
+"dbD-uI-rLK.text" = "WiFi";
+
+/* Class = "UISearchBar"; placeholder = "商品搜尋"; ObjectID = "ebR-zZ-OVc"; */
+"ebR-zZ-OVc.placeholder" = "商品搜尋";
+
+/* Class = "UILabel"; text = "酒店"; ObjectID = "g53-IL-ApZ"; */
+"g53-IL-ApZ.text" = "酒店";
+
+/* Class = "UITabBarItem"; title = "分類"; ObjectID = "gjp-HB-JEG"; */
+"gjp-HB-JEG.title" = "分類";
+
+/* Class = "UILabel"; text = "票卷"; ObjectID = "iVt-gM-6eE"; */
+"iVt-gM-6eE.text" = "票卷";
+
+/* Class = "UITabBarItem"; title = "購物車"; ObjectID = "mAc-K3-L8Z"; */
+"mAc-K3-L8Z.title" = "購物車";
+
+/* Class = "UILabel"; text = "商品分類"; ObjectID = "wgi-To-FMe"; */
+"wgi-To-FMe.text" = "商品分類";

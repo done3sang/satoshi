@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "帳號"; ObjectID = "FPu-3w-lMy"; */
+"FPu-3w-lMy.text" = "帳號";
+
+/* Class = "UITextField"; placeholder = "請輸入密碼"; ObjectID = "HGI-WU-uQH"; */
+"HGI-WU-uQH.placeholder" = "請輸入密碼";
+
+/* Class = "UILabel"; text = "密碼"; ObjectID = "RxI-0D-Rfc"; */
+"RxI-0D-Rfc.text" = "密碼";
+
+/* Class = "UIButton"; normalTitle = "忘記密碼？"; ObjectID = "Tzt-hg-OJF"; */
+"Tzt-hg-OJF.normalTitle" = "忘記密碼？";
+
+/* Class = "UILabel"; text = "歡迎登入"; ObjectID = "UGL-ZH-jHU"; */
+"UGL-ZH-jHU.text" = "歡迎登入";
+
+/* Class = "UIButton"; normalTitle = "註冊會員"; ObjectID = "XIY-n6-Za0"; */
+"XIY-n6-Za0.normalTitle" = "註冊會員";
+
+/* Class = "UITextField"; placeholder = "郵箱地址"; ObjectID = "eQQ-sU-OG4"; */
+"eQQ-sU-OG4.placeholder" = "郵箱地址";
+
+/* Class = "UIButton"; normalTitle = "登入"; ObjectID = "rdG-NY-iN0"; */
+"rdG-NY-iN0.normalTitle" = "登入";

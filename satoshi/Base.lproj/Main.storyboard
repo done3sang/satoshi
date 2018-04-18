@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NmB-xY-slq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dNb-yE-2dZ">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -142,14 +142,14 @@
                                         <state key="normal" image="buywifi"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8g-l8-V3N" userLabel="BuyTrafficButton">
-                                        <rect key="frame" x="0.0" y="425" width="375" height="211"/>
+                                        <rect key="frame" x="0.0" y="425.00000000000006" width="375" height="210.66666666666669"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="J8g-l8-V3N" secondAttribute="height" multiplier="750:422" id="qVq-DF-Peo"/>
                                         </constraints>
                                         <state key="normal" image="buytraffic"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDt-VL-rA6" userLabel="TestButton">
-                                        <rect key="frame" x="0.0" y="636" width="375" height="211"/>
+                                        <rect key="frame" x="0.0" y="635.66666666666663" width="375" height="211"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="UDt-VL-rA6" secondAttribute="height" multiplier="750:422" id="T4r-IS-ah2"/>
                                         </constraints>
@@ -195,7 +195,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hv5-gb-f9J"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="首頁" image="home" selectedImage="home_selected" id="4Jk-AT-Xj6" userLabel="Home"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="首頁" image="home" selectedImage="home_selected" id="4Jk-AT-Xj6" userLabel="Home"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -228,7 +228,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4f3-4E-8ux" userLabel="MenuTableView">
-                                <rect key="frame" x="0.0" y="75" width="93.333333333333329" height="654"/>
+                                <rect key="frame" x="0.0" y="75" width="93.666666666666671" height="654"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4f3-4E-8ux" secondAttribute="height" multiplier="1:7" id="X60-tY-VM5"/>
@@ -238,42 +238,42 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L1I-lT-E1Y" userLabel="ItemCollectionView">
                                 <rect key="frame" x="93" y="75" width="282" height="654"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nwk-W0-9lP">
-                                    <size key="itemSize" width="135" height="150"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Nwk-W0-9lP">
+                                    <size key="itemSize" width="120" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReusedCell" id="Zc0-Z3-k4t">
-                                        <rect key="frame" x="0.0" y="0.0" width="135" height="150"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="135" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mallitem" translatesAutoresizingMaskIntoConstraints="NO" id="oUu-ri-1Ws" userLabel="ItemImageView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="135" height="75"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="62.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GogoWifi WIFI蛋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5K-x8-Lfj" userLabel="ItemNameLabel">
-                                                    <rect key="frame" x="5" y="83" width="119" height="20"/>
+                                                    <rect key="frame" x="5" y="77" width="93" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HKD799" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GH7-6I-5V1" userLabel="ItemPriceLabel">
-                                                    <rect key="frame" x="5" y="112" width="62" height="20"/>
+                                                    <rect key="frame" x="5" y="102" width="48" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HKD999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTA-d8-i2x" userLabel="ItemDiscountLabel">
-                                                    <rect key="frame" x="74" y="113" width="49" height="15"/>
+                                                    <rect key="frame" x="60" y="103" width="42" height="12"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -303,7 +303,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="608-ev-gou"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="分類" image="category" selectedImage="category_selected" id="gjp-HB-JEG" userLabel="Category"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="分類" image="category" selectedImage="category_selected" id="gjp-HB-JEG" userLabel="Category"/>
                     <connections>
                         <outlet property="collectionView" destination="L1I-lT-E1Y" id="QPW-SG-6d9"/>
                         <outlet property="tableView" destination="4f3-4E-8ux" id="aW2-hO-wa8"/>
@@ -313,21 +313,35 @@
             </objects>
             <point key="canvasLocation" x="-386.39999999999998" y="-1559.8522167487686"/>
         </scene>
-        <!--Shopping Cart View Controller-->
+        <!--Cart View Controller-->
         <scene sceneID="5QX-7o-nn1">
             <objects>
-                <viewController id="qB4-YS-1Ny" userLabel="Shopping Cart View Controller" customClass="ShoppingCartViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qB4-YS-1Ny" userLabel="Cart View Controller" customClass="CartViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RYs-aF-vAa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwh-j0-u7x" userLabel="TitleLabel">
+                                <rect key="frame" x="0.0" y="44" width="375" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Uwh-j0-u7x" firstAttribute="top" secondItem="ptz-Y2-WWQ" secondAttribute="top" id="9do-VN-HzD"/>
+                            <constraint firstItem="Uwh-j0-u7x" firstAttribute="centerX" secondItem="RYs-aF-vAa" secondAttribute="centerX" id="amR-s9-vxy"/>
+                            <constraint firstItem="Uwh-j0-u7x" firstAttribute="width" secondItem="ptz-Y2-WWQ" secondAttribute="width" id="htc-tK-d1f"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ptz-Y2-WWQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="購物車" image="cart" selectedImage="cart_selected" id="mAc-K3-L8Z" userLabel="ShoppingCart"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="購物車" image="cart" selectedImage="cart_selected" id="mAc-K3-L8Z" userLabel="Cart"/>
+                    <navigationItem key="navigationItem" id="EB4-Tu-kMJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u1q-nj-g25" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-384" y="-846"/>
+            <point key="canvasLocation" x="-396" y="-850"/>
         </scene>
         <!--Mine View Controller-->
         <scene sceneID="3vc-XC-A3N">
@@ -339,17 +353,33 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="raa-7D-wzg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="我的" image="mine" selectedImage="mine_selected" id="YE6-Rh-gVd" userLabel="Mine"/>
+                    <tabBarItem key="tabBarItem" tag="4" title="我的" image="mine" selectedImage="mine_selected" id="YE6-Rh-gVd" userLabel="Mine"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FEu-9P-xrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-384" y="-160"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Navigation Controller-->
+        <scene sceneID="9n1-Oq-JxA">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="dNb-yE-2dZ" userLabel="Main Navigation Controller" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="im1-qZ-QXg">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NmB-xY-slq" kind="relationship" relationship="rootViewController" id="U6k-bR-obA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oET-cq-eqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3182" y="-412"/>
+        </scene>
+        <!--Main View Controller-->
         <scene sceneID="GTf-yZ-seM">
             <objects>
-                <tabBarController id="NmB-xY-slq" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8tN-Pz-PrP">
+                <tabBarController storyboardIdentifier="Main" id="NmB-xY-slq" customClass="MainViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WFH-Xd-wf3"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8tN-Pz-PrP" userLabel="TabBar">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
