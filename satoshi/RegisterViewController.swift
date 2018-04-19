@@ -1,15 +1,20 @@
 //
-//  LoginViewController.swift
+//  RegisterViewController.swift
 //  satoshi
 //
-//  Created by xy on 18/04/2018.
+//  Created by xy on 19/04/2018.
 //  Copyright © 2018 xy. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class RegisterViewController: UIViewController {
+    @IBOutlet var accountTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var againPasswordTextField: UITextField!
+    @IBOutlet var readButton: UIButton!
+    
+    var protocolReaded = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +44,32 @@ class LoginViewController: UIViewController {
         passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
     }
     
-    @IBAction func fogetPassword() {
-        let nibName = "Forgot"
+    @IBAction func showAgainPassword() {
+        againPasswordTextField.isSecureTextEntry = !againPasswordTextField.isSecureTextEntry
+    }
+    
+    @IBAction func registerUser() {
+        
+    }
+    
+    @IBAction func readProtocol() {
+        protocolReaded = !protocolReaded
+        readButton.setTitle(protocolReaded ? "是": "不是", for: .normal)
+    }
+    
+    @IBAction func showProtocol() {
+        let protocolSb = UIStoryboard(name: "Protocol", bundle: nil)
+        let protocolViewController = protocolSb.instantiateViewController(withIdentifier: "Protocol")as! ProtocolViewController
+        self.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(protocolViewController, animated: true)
+        //self.hidesBottomBarWhenPushed = false
+    }
+    
+    @IBAction func gotoLogin() {
+        let nibName = "Login"
         if let navigationController = self.navigationController {
             for viewController in navigationController.viewControllers {
-                if viewController.isKind(of: ForgotViewController.self) {
+                if viewController.isKind(of: LoginViewController.self) {
                     navigationController.popToViewController(viewController, animated: true)
                     return
                 }
@@ -51,24 +77,7 @@ class LoginViewController: UIViewController {
         }
         
         let sb = UIStoryboard(name: nibName, bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: nibName) as! ForgotViewController
-        self.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
-        //self.hidesBottomBarWhenPushed = false
-    }
-    
-    @IBAction func gotoRegister() {
-        if let navigationController = self.navigationController {
-            for viewController in navigationController.viewControllers {
-                if viewController.isKind(of: RegisterViewController.self) {
-                    navigationController.popToViewController(viewController, animated: true)
-                    return
-                }
-            }
-        }
-        
-        let sb = UIStoryboard(name: "Register", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "Register") as! RegisterViewController
+        let vc = sb.instantiateViewController(withIdentifier: nibName) as! LoginViewController
         self.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
         //self.hidesBottomBarWhenPushed = false

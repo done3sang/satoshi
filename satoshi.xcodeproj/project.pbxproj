@@ -18,6 +18,12 @@
 		141F2C3020805DAF00DC01CB /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141F2C2F20805DAF00DC01CB /* MineViewController.swift */; };
 		147D7BCE2087231C00C43240 /* ProtocolUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147D7BCD2087231C00C43240 /* ProtocolUser.swift */; };
 		14D3714D2084B3C20012670F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D3714C2084B3C20012670F /* Utility.swift */; };
+		14D8FE1620885909000BB672 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D8FE1420885909000BB672 /* Register.storyboard */; };
+		14D8FE1820885925000BB672 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8FE1720885925000BB672 /* RegisterViewController.swift */; };
+		14D8FE1B20887BE7000BB672 /* Protocol.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D8FE1920887BE7000BB672 /* Protocol.storyboard */; };
+		14D8FE1D20887D24000BB672 /* ProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8FE1C20887D24000BB672 /* ProtocolViewController.swift */; };
+		14D8FE2320888113000BB672 /* Forgot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D8FE2120888112000BB672 /* Forgot.storyboard */; };
+		14D8FE252088812E000BB672 /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8FE242088812E000BB672 /* ForgotViewController.swift */; };
 		14DA99E22080AFEC00D3BDDD /* AutoPageScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA99E12080AFEC00D3BDDD /* AutoPageScroll.swift */; };
 		14F711382086F68B000A556D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F711362086F68B000A556D /* Login.storyboard */; };
 		14F7113A20870864000A556D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7113920870864000A556D /* LoginViewController.swift */; };
@@ -37,6 +43,12 @@
 		141F2C2F20805DAF00DC01CB /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		147D7BCD2087231C00C43240 /* ProtocolUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolUser.swift; sourceTree = "<group>"; };
 		14D3714C2084B3C20012670F /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		14D8FE1520885909000BB672 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
+		14D8FE1720885925000BB672 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		14D8FE1A20887BE7000BB672 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Protocol.storyboard; sourceTree = "<group>"; };
+		14D8FE1C20887D24000BB672 /* ProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolViewController.swift; sourceTree = "<group>"; };
+		14D8FE2220888112000BB672 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Forgot.storyboard; sourceTree = "<group>"; };
+		14D8FE242088812E000BB672 /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
 		14DA99E12080AFEC00D3BDDD /* AutoPageScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoPageScroll.swift; sourceTree = "<group>"; };
 		14F711372086F68B000A556D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		14F7113920870864000A556D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +113,9 @@
 				141F2C2D20805DA500DC01CB /* CartViewController.swift */,
 				141F2C2F20805DAF00DC01CB /* MineViewController.swift */,
 				14F7113920870864000A556D /* LoginViewController.swift */,
+				14D8FE1720885925000BB672 /* RegisterViewController.swift */,
+				14D8FE1C20887D24000BB672 /* ProtocolViewController.swift */,
+				14D8FE242088812E000BB672 /* ForgotViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -119,6 +134,9 @@
 				141F2BD5207F505700DC01CB /* LaunchScreen.storyboard */,
 				141F2BD0207F504E00DC01CB /* Main.storyboard */,
 				14F711362086F68B000A556D /* Login.storyboard */,
+				14D8FE1420885909000BB672 /* Register.storyboard */,
+				14D8FE1920887BE7000BB672 /* Protocol.storyboard */,
+				14D8FE2120888112000BB672 /* Forgot.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -189,10 +207,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D8FE1B20887BE7000BB672 /* Protocol.storyboard in Resources */,
 				14F711382086F68B000A556D /* Login.storyboard in Resources */,
 				141F2BD7207F505700DC01CB /* LaunchScreen.storyboard in Resources */,
 				141F2BD4207F505700DC01CB /* Assets.xcassets in Resources */,
 				141F2BD2207F504E00DC01CB /* Main.storyboard in Resources */,
+				14D8FE2320888113000BB672 /* Forgot.storyboard in Resources */,
+				14D8FE1620885909000BB672 /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,8 +225,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				14F7113A20870864000A556D /* LoginViewController.swift in Sources */,
+				14D8FE1820885925000BB672 /* RegisterViewController.swift in Sources */,
 				141F2C2C20805D9500DC01CB /* CategoryViewController.swift in Sources */,
+				14D8FE252088812E000BB672 /* ForgotViewController.swift in Sources */,
 				141F2BCF207F504E00DC01CB /* MainViewController.swift in Sources */,
+				14D8FE1D20887D24000BB672 /* ProtocolViewController.swift in Sources */,
 				14DA99E22080AFEC00D3BDDD /* AutoPageScroll.swift in Sources */,
 				147D7BCE2087231C00C43240 /* ProtocolUser.swift in Sources */,
 				141F2BCD207F504E00DC01CB /* AppDelegate.swift in Sources */,
@@ -233,6 +257,30 @@
 				141F2BD6207F505700DC01CB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		14D8FE1420885909000BB672 /* Register.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14D8FE1520885909000BB672 /* Base */,
+			);
+			name = Register.storyboard;
+			sourceTree = "<group>";
+		};
+		14D8FE1920887BE7000BB672 /* Protocol.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14D8FE1A20887BE7000BB672 /* Base */,
+			);
+			name = Protocol.storyboard;
+			sourceTree = "<group>";
+		};
+		14D8FE2120888112000BB672 /* Forgot.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14D8FE2220888112000BB672 /* Base */,
+			);
+			name = Forgot.storyboard;
 			sourceTree = "<group>";
 		};
 		14F711362086F68B000A556D /* Login.storyboard */ = {

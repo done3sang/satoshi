@@ -15,34 +15,34 @@
         <!--Login View Controller-->
         <scene sceneID="ivT-b8-bGc">
             <objects>
-                <viewController storyboardIdentifier="Login" id="37K-V3-eLb" customClass="LoginViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" title="會員登錄" useStoryboardIdentifierAsRestorationIdentifier="YES" id="37K-V3-eLb" userLabel="Login View Controller" customClass="LoginViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kdr-8d-9Yp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="RHo-xQ-Q2L" userLabel="LogoImageView">
-                                <rect key="frame" x="131.66666666666666" y="69" width="112" height="111"/>
+                                <rect key="frame" x="132" y="69" width="112" height="111"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歡迎登入" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGL-ZH-jHU" userLabel="WelcomeLabel">
-                                <rect key="frame" x="150.66666666666666" y="190" width="74" height="22"/>
+                                <rect key="frame" x="151" y="190" width="74" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="帳號" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPu-3w-lMy" userLabel="AccountLabel">
-                                <rect key="frame" x="16" y="232" width="35" height="20.666666666666657"/>
+                                <rect key="frame" x="16" y="232" width="35" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="郵箱地址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eQQ-sU-OG4" userLabel="AccountTextField">
-                                <rect key="frame" x="61" y="227.66666666666666" width="298" height="29.999999999999972"/>
+                                <rect key="frame" x="61" y="228" width="298" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密碼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxI-0D-Rfc" userLabel="PasswordLabel">
-                                <rect key="frame" x="16" y="282.66666666666669" width="35" height="21"/>
+                                <rect key="frame" x="16" y="283" width="35" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -51,27 +51,44 @@
                                 <rect key="frame" x="61" y="278" width="298" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFV-m9-rrz" userLabel="PasswordSwitchButton">
+                                <rect key="frame" x="312" y="278" width="47" height="30"/>
+                                <state key="normal" title="Switch"/>
+                                <connections>
+                                    <action selector="showPassword" destination="37K-V3-eLb" eventType="touchUpInside" id="neD-hO-x7P"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdG-NY-iN0" userLabel="LoginButton">
-                                <rect key="frame" x="16" y="333" width="343" height="30"/>
-                                <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                <rect key="frame" x="16" y="333" width="343" height="32"/>
+                                <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="登入">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzt-hg-OJF" userLabel="ForgotButton">
-                                <rect key="frame" x="16" y="388" width="77" height="30"/>
+                                <rect key="frame" x="16" y="390" width="77" height="30"/>
                                 <state key="normal" title="忘記密碼？"/>
+                                <connections>
+                                    <action selector="fogetPassword" destination="37K-V3-eLb" eventType="touchUpInside" id="XY7-3W-zmF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIY-n6-Za0" userLabel="RegisterButton">
-                                <rect key="frame" x="297" y="388" width="62" height="30"/>
+                                <rect key="frame" x="297" y="390" width="62" height="30"/>
                                 <state key="normal" title="註冊會員"/>
+                                <connections>
+                                    <action selector="gotoRegister" destination="37K-V3-eLb" eventType="touchUpInside" id="bcc-fE-anZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="kFV-m9-rrz" firstAttribute="top" secondItem="HGI-WU-uQH" secondAttribute="top" id="0br-PE-mAK"/>
                             <constraint firstItem="RHo-xQ-Q2L" firstAttribute="top" secondItem="Pz3-ZB-BSB" secondAttribute="top" constant="25" id="2jc-Rw-daX"/>
+                            <constraint firstItem="kFV-m9-rrz" firstAttribute="height" secondItem="HGI-WU-uQH" secondAttribute="height" id="3hd-43-nq0"/>
+                            <constraint firstItem="kFV-m9-rrz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Kdr-8d-9Yp" secondAttribute="leading" constant="20" symbolic="YES" id="5E6-me-ow1"/>
                             <constraint firstItem="RxI-0D-Rfc" firstAttribute="top" secondItem="eQQ-sU-OG4" secondAttribute="bottom" constant="25" id="5Fb-Nb-9LO"/>
                             <constraint firstItem="Tzt-hg-OJF" firstAttribute="left" secondItem="Kdr-8d-9Yp" secondAttribute="leftMargin" id="84u-T9-kvE"/>
                             <constraint firstItem="rdG-NY-iN0" firstAttribute="left" secondItem="Kdr-8d-9Yp" secondAttribute="leftMargin" id="91D-Kv-sIv"/>
@@ -81,6 +98,7 @@
                             <constraint firstItem="FPu-3w-lMy" firstAttribute="left" secondItem="Kdr-8d-9Yp" secondAttribute="leftMargin" id="KDI-K1-Rz9"/>
                             <constraint firstItem="RHo-xQ-Q2L" firstAttribute="centerX" secondItem="Kdr-8d-9Yp" secondAttribute="centerX" id="KUZ-Uk-UWD"/>
                             <constraint firstItem="XIY-n6-Za0" firstAttribute="top" secondItem="rdG-NY-iN0" secondAttribute="bottom" constant="25" id="Lnx-lD-umH"/>
+                            <constraint firstItem="kFV-m9-rrz" firstAttribute="trailing" secondItem="HGI-WU-uQH" secondAttribute="trailing" id="N6J-m4-tMK"/>
                             <constraint firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="Tzt-hg-OJF" secondAttribute="trailing" id="OAh-wJ-WJd"/>
                             <constraint firstItem="XIY-n6-Za0" firstAttribute="right" secondItem="Kdr-8d-9Yp" secondAttribute="rightMargin" id="OJU-ZZ-cQk"/>
                             <constraint firstItem="rdG-NY-iN0" firstAttribute="centerX" secondItem="Kdr-8d-9Yp" secondAttribute="centerX" id="T3M-PU-VVW"/>
@@ -98,6 +116,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pz3-ZB-BSB"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="HGI-WU-uQH" id="RCh-bc-oFQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1u-7M-2n2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

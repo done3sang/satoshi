@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Protocol View Controller-->
+        <scene sceneID="WfE-Jw-1E3">
+            <objects>
+                <viewController storyboardIdentifier="Protocol" title="協議條款及細則" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jin-WF-Bl5" userLabel="Protocol View Controller" customClass="ProtocolViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ih2-fy-SIw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyX-YN-TEH" userLabel="ProtocolScrollView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nyX-YN-TEH" firstAttribute="top" secondItem="dtW-wf-sC5" secondAttribute="top" id="6U5-Ps-7sP"/>
+                            <constraint firstItem="nyX-YN-TEH" firstAttribute="width" secondItem="dtW-wf-sC5" secondAttribute="width" id="8bW-J0-GsV"/>
+                            <constraint firstItem="nyX-YN-TEH" firstAttribute="leading" secondItem="dtW-wf-sC5" secondAttribute="leading" id="LHH-in-rui"/>
+                            <constraint firstItem="nyX-YN-TEH" firstAttribute="trailing" secondItem="dtW-wf-sC5" secondAttribute="trailing" id="cru-B3-hSh"/>
+                            <constraint firstItem="nyX-YN-TEH" firstAttribute="height" secondItem="dtW-wf-sC5" secondAttribute="height" id="gXi-Yn-561"/>
+                            <constraint firstItem="nyX-YN-TEH" firstAttribute="bottom" secondItem="dtW-wf-sC5" secondAttribute="bottom" id="oyg-0W-iD5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dtW-wf-sC5"/>
+                    </view>
+                    <connections>
+                        <outlet property="protocolScrollView" destination="nyX-YN-TEH" id="k1E-QH-3Ep"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qeh-YH-t3J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.599999999999994" y="228.93553223388307"/>
+        </scene>
+    </scenes>
+</document>

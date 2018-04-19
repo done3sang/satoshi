@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dNb-yE-2dZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NmB-xY-slq">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -142,14 +143,14 @@
                                         <state key="normal" image="buywifi"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8g-l8-V3N" userLabel="BuyTrafficButton">
-                                        <rect key="frame" x="0.0" y="425.00000000000006" width="375" height="210.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="425" width="375" height="211"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="J8g-l8-V3N" secondAttribute="height" multiplier="750:422" id="qVq-DF-Peo"/>
                                         </constraints>
                                         <state key="normal" image="buytraffic"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDt-VL-rA6" userLabel="TestButton">
-                                        <rect key="frame" x="0.0" y="635.66666666666663" width="375" height="211"/>
+                                        <rect key="frame" x="0.0" y="636" width="375" height="211"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="UDt-VL-rA6" secondAttribute="height" multiplier="750:422" id="T4r-IS-ah2"/>
                                         </constraints>
@@ -221,14 +222,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品分類" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgi-To-FMe" userLabel="TitleLabel">
-                                <rect key="frame" x="0.0" y="44" width="375" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4f3-4E-8ux" userLabel="MenuTableView">
-                                <rect key="frame" x="0.0" y="75" width="93.666666666666671" height="654"/>
+                                <rect key="frame" x="0.0" y="44" width="98" height="685"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4f3-4E-8ux" secondAttribute="height" multiplier="1:7" id="X60-tY-VM5"/>
@@ -236,7 +231,7 @@
                                 <sections/>
                             </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L1I-lT-E1Y" userLabel="ItemCollectionView">
-                                <rect key="frame" x="93" y="75" width="282" height="654"/>
+                                <rect key="frame" x="98" y="44" width="277" height="685"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Nwk-W0-9lP">
                                     <size key="itemSize" width="120" height="128"/>
@@ -291,13 +286,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="L1I-lT-E1Y" firstAttribute="leading" secondItem="4f3-4E-8ux" secondAttribute="trailing" id="5Qn-4e-vkq"/>
-                            <constraint firstItem="wgi-To-FMe" firstAttribute="top" secondItem="608-ev-gou" secondAttribute="top" id="CHQ-Qn-YHd"/>
                             <constraint firstItem="L1I-lT-E1Y" firstAttribute="top" secondItem="4f3-4E-8ux" secondAttribute="top" id="DPH-ie-KdU"/>
-                            <constraint firstItem="wgi-To-FMe" firstAttribute="centerX" secondItem="vLf-fA-ASm" secondAttribute="centerX" id="I0a-Wi-Uwk"/>
                             <constraint firstItem="4f3-4E-8ux" firstAttribute="leading" secondItem="608-ev-gou" secondAttribute="leading" id="K7f-g8-ZuV"/>
-                            <constraint firstItem="4f3-4E-8ux" firstAttribute="top" secondItem="wgi-To-FMe" secondAttribute="bottom" constant="10" id="R18-0m-GCD"/>
+                            <constraint firstItem="4f3-4E-8ux" firstAttribute="top" secondItem="608-ev-gou" secondAttribute="top" id="R18-0m-GCD"/>
                             <constraint firstItem="4f3-4E-8ux" firstAttribute="bottom" secondItem="608-ev-gou" secondAttribute="bottom" id="tVr-9o-FVh"/>
-                            <constraint firstItem="wgi-To-FMe" firstAttribute="width" secondItem="608-ev-gou" secondAttribute="width" id="y5D-QF-GN7"/>
                             <constraint firstItem="L1I-lT-E1Y" firstAttribute="bottom" secondItem="608-ev-gou" secondAttribute="bottom" id="zXR-Dz-02G"/>
                             <constraint firstItem="L1I-lT-E1Y" firstAttribute="trailing" secondItem="608-ev-gou" secondAttribute="trailing" id="zhG-76-5rx"/>
                         </constraints>
@@ -316,7 +308,7 @@
         <!--Cart View Controller-->
         <scene sceneID="5QX-7o-nn1">
             <objects>
-                <viewController id="qB4-YS-1Ny" userLabel="Cart View Controller" customClass="CartViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="購物車" id="qB4-YS-1Ny" userLabel="Cart View Controller" customClass="CartViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RYs-aF-vAa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,38 +333,99 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u1q-nj-g25" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-396" y="-850"/>
+            <point key="canvasLocation" x="884" y="-846"/>
+        </scene>
+        <!--Cart Navigation View-->
+        <scene sceneID="Ow9-5V-9Uy">
+            <objects>
+                <navigationController title="購物車" navigationBarHidden="YES" id="kAq-41-suG" userLabel="Cart Navigation View" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="購物車" selectedImage="cart" id="1Nj-0P-K4z" userLabel="CartNav"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4l1-Dj-xdG">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qB4-YS-1Ny" kind="relationship" relationship="rootViewController" id="ZHW-th-a0T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="INN-Rr-uKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-386" y="-846"/>
         </scene>
         <!--Mine View Controller-->
         <scene sceneID="3vc-XC-A3N">
             <objects>
-                <viewController id="4Km-HJ-E76" userLabel="Mine View Controller" customClass="MineViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="會員中心" id="4Km-HJ-E76" userLabel="Mine View Controller" customClass="MineViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FQo-bB-Vcf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nbB-fS-hVe" userLabel="MineBackground">
+                                <rect key="frame" x="0.0" y="44" width="375" height="300"/>
+                                <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nbB-fS-hVe" secondAttribute="height" multiplier="375:300" id="JQX-X8-19v"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="ihc-2W-Rd9" userLabel="MineIcon">
+                                <rect key="frame" x="107" y="54" width="161" height="161"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="avO-74-Osf">
+                                <rect key="frame" x="0.0" y="306.66666666666669" width="375" height="37.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydn-og-Gdh" userLabel="MoneyButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="37.333333333333336"/>
+                                        <state key="normal" title="餘額 0">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSn-Cg-DK4" userLabel="PointButton">
+                                        <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="37.333333333333336"/>
+                                        <state key="normal" title="積分 0">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="avO-74-Osf" secondAttribute="height" multiplier="10:1" id="U55-M6-3G9"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E31-aH-oA1" userLabel="LoginButton">
+                                <rect key="frame" x="120" y="240" width="100" height="30"/>
+                                <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                <state key="normal" title="登入"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfi-9e-QHb" userLabel="RegisterButton">
+                                <rect key="frame" x="212.66666666666666" y="240" width="31" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="註冊"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nbB-fS-hVe" firstAttribute="centerX" secondItem="FQo-bB-Vcf" secondAttribute="centerX" id="3Nj-FG-qma"/>
+                            <constraint firstItem="E31-aH-oA1" firstAttribute="top" secondItem="ihc-2W-Rd9" secondAttribute="bottom" constant="25" id="DUd-4O-iQN"/>
+                            <constraint firstItem="nbB-fS-hVe" firstAttribute="leading" secondItem="raa-7D-wzg" secondAttribute="leading" id="H3n-Sa-9bw"/>
+                            <constraint firstItem="avO-74-Osf" firstAttribute="bottom" secondItem="nbB-fS-hVe" secondAttribute="bottom" id="JJB-HU-hrO"/>
+                            <constraint firstItem="Pfi-9e-QHb" firstAttribute="top" secondItem="ihc-2W-Rd9" secondAttribute="bottom" constant="25" id="LU4-IS-ENP"/>
+                            <constraint firstItem="ihc-2W-Rd9" firstAttribute="top" secondItem="raa-7D-wzg" secondAttribute="top" constant="10" id="NcV-so-Dwm"/>
+                            <constraint firstItem="E31-aH-oA1" firstAttribute="trailing" secondItem="nbB-fS-hVe" secondAttribute="centerX" constant="-25" id="SiR-go-jzP"/>
+                            <constraint firstItem="nbB-fS-hVe" firstAttribute="top" secondItem="raa-7D-wzg" secondAttribute="top" id="Xnb-IO-Vfz"/>
+                            <constraint firstItem="avO-74-Osf" firstAttribute="trailing" secondItem="nbB-fS-hVe" secondAttribute="trailing" id="dVv-FN-03z"/>
+                            <constraint firstItem="avO-74-Osf" firstAttribute="leading" secondItem="nbB-fS-hVe" secondAttribute="leading" id="hJz-7q-GUK"/>
+                            <constraint firstItem="ihc-2W-Rd9" firstAttribute="centerX" secondItem="FQo-bB-Vcf" secondAttribute="centerX" id="lZ9-kL-MIB"/>
+                            <constraint firstItem="Pfi-9e-QHb" firstAttribute="leading" secondItem="nbB-fS-hVe" secondAttribute="centerX" constant="25" id="ngL-oL-T3U"/>
+                            <constraint firstItem="nbB-fS-hVe" firstAttribute="width" secondItem="raa-7D-wzg" secondAttribute="width" id="xi6-2P-9D4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="raa-7D-wzg"/>
                     </view>
                     <tabBarItem key="tabBarItem" tag="4" title="我的" image="mine" selectedImage="mine_selected" id="YE6-Rh-gVd" userLabel="Mine"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FEu-9P-xrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-384" y="-160"/>
-        </scene>
-        <!--Main Navigation Controller-->
-        <scene sceneID="9n1-Oq-JxA">
-            <objects>
-                <navigationController navigationBarHidden="YES" id="dNb-yE-2dZ" userLabel="Main Navigation Controller" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="im1-qZ-QXg">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="NmB-xY-slq" kind="relationship" relationship="rootViewController" id="U6k-bR-obA"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oET-cq-eqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3182" y="-412"/>
+            <point key="canvasLocation" x="-396" y="-172.16748768472908"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="GTf-yZ-seM">
@@ -387,8 +440,8 @@
                     <connections>
                         <segue destination="7Fl-pn-eBu" kind="relationship" relationship="viewControllers" id="ZRO-8M-SaZ"/>
                         <segue destination="MjN-YB-meA" kind="relationship" relationship="viewControllers" id="pkK-nG-qg1"/>
-                        <segue destination="qB4-YS-1Ny" kind="relationship" relationship="viewControllers" id="kQa-pP-yeB"/>
-                        <segue destination="4Km-HJ-E76" kind="relationship" relationship="viewControllers" id="D3S-Qf-NMH"/>
+                        <segue destination="kAq-41-suG" kind="relationship" relationship="viewControllers" id="GCT-Rc-8IB"/>
+                        <segue destination="4Km-HJ-E76" kind="relationship" relationship="viewControllers" id="adh-VJ-V8r"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l2u-Wu-AEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -397,6 +450,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="avatar" width="161" height="161"/>
         <image name="buytraffic" width="750" height="422"/>
         <image name="buywifi" width="750" height="422"/>
         <image name="cart" width="29" height="27"/>

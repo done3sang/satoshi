@@ -82,8 +82,8 @@ class HomeViewController: UIViewController, UISearchBarDelegate, AutoPageControl
         let tapGesture  = UITapGestureRecognizer(target: self, action: #selector(tapSearchBackground))
         searchBackgroudView?.addGestureRecognizer(tapGesture)
         self.view.addSubview(searchBackgroudView!)
+         self.view.bringSubview(toFront: searchBar)
         self.view.bringSubview(toFront: searchLogo)
-        self.view.bringSubview(toFront: searchBar)
     }
     
     @objc func tapSearchBackground() {
