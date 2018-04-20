@@ -58,28 +58,10 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func showProtocol() {
-        let protocolSb = UIStoryboard(name: "Protocol", bundle: nil)
-        let protocolViewController = protocolSb.instantiateViewController(withIdentifier: "Protocol")as! ProtocolViewController
-        self.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(protocolViewController, animated: true)
-        //self.hidesBottomBarWhenPushed = false
+        GotoStoryboard.gotoProtocol(currentviewController: self)
     }
     
     @IBAction func gotoLogin() {
-        let nibName = "Login"
-        if let navigationController = self.navigationController {
-            for viewController in navigationController.viewControllers {
-                if viewController.isKind(of: LoginViewController.self) {
-                    navigationController.popToViewController(viewController, animated: true)
-                    return
-                }
-            }
-        }
-        
-        let sb = UIStoryboard(name: nibName, bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: nibName) as! LoginViewController
-        self.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
-        //self.hidesBottomBarWhenPushed = false
+        GotoStoryboard.gotoLogin(currentviewController: self)
     }
 }

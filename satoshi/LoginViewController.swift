@@ -40,37 +40,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func fogetPassword() {
-        let nibName = "Forgot"
-        if let navigationController = self.navigationController {
-            for viewController in navigationController.viewControllers {
-                if viewController.isKind(of: ForgotViewController.self) {
-                    navigationController.popToViewController(viewController, animated: true)
-                    return
-                }
-            }
-        }
-        
-        let sb = UIStoryboard(name: nibName, bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: nibName) as! ForgotViewController
-        self.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
-        //self.hidesBottomBarWhenPushed = false
+        GotoStoryboard.gotoForgot(currentviewController: self)
     }
     
     @IBAction func gotoRegister() {
-        if let navigationController = self.navigationController {
-            for viewController in navigationController.viewControllers {
-                if viewController.isKind(of: RegisterViewController.self) {
-                    navigationController.popToViewController(viewController, animated: true)
-                    return
-                }
-            }
-        }
-        
-        let sb = UIStoryboard(name: "Register", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "Register") as! RegisterViewController
-        self.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
-        //self.hidesBottomBarWhenPushed = false
+        GotoStoryboard.gotoRegister(currentviewController: self)
     }
 }

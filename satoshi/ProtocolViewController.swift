@@ -9,16 +9,17 @@
 import UIKit
 
 class ProtocolViewController: UIViewController {
-    @IBOutlet var protocolScrollView: UIScrollView!
+    @IBOutlet var protocolLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        /*
         let protocolLabel = UILabel()
         let protocolText = NSAttributedString(string: "協議條款及細則內容", attributes: [NSAttributedStringKey.foregroundColor : UIColor.black, NSAttributedStringKey.font : UIFont.systemFont(ofSize: 16.0)])
         protocolLabel.attributedText = protocolText
-        protocolScrollView.addSubview(protocolLabel)
+        protocolScrollView.addSubview(protocolLabel)*/
     }
 
     override func viewWillAppear(_ animated: Bool) {

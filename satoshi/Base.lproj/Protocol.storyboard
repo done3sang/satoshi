@@ -20,21 +20,47 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyX-YN-TEH" userLabel="ProtocolScrollView">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdn-oI-AaH" userLabel="ProtocolLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="162" height="21"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="協議條款及細則內容">
+                                                <attributes>
+                                                    <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="18" name="STSongti-SC-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="27.5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="27.5">
+                                                                <options/>
+                                                            </textTab>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gdn-oI-AaH" firstAttribute="trailing" secondItem="nyX-YN-TEH" secondAttribute="trailing" id="73p-eC-5vh"/>
+                                    <constraint firstItem="gdn-oI-AaH" firstAttribute="top" secondItem="nyX-YN-TEH" secondAttribute="top" id="DRN-eX-8y4"/>
+                                    <constraint firstItem="gdn-oI-AaH" firstAttribute="bottom" secondItem="nyX-YN-TEH" secondAttribute="bottom" id="YzJ-uJ-qEh"/>
+                                    <constraint firstItem="gdn-oI-AaH" firstAttribute="leading" secondItem="nyX-YN-TEH" secondAttribute="leading" id="bwu-mc-aft"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nyX-YN-TEH" firstAttribute="top" secondItem="dtW-wf-sC5" secondAttribute="top" id="6U5-Ps-7sP"/>
-                            <constraint firstItem="nyX-YN-TEH" firstAttribute="width" secondItem="dtW-wf-sC5" secondAttribute="width" id="8bW-J0-GsV"/>
                             <constraint firstItem="nyX-YN-TEH" firstAttribute="leading" secondItem="dtW-wf-sC5" secondAttribute="leading" id="LHH-in-rui"/>
                             <constraint firstItem="nyX-YN-TEH" firstAttribute="trailing" secondItem="dtW-wf-sC5" secondAttribute="trailing" id="cru-B3-hSh"/>
-                            <constraint firstItem="nyX-YN-TEH" firstAttribute="height" secondItem="dtW-wf-sC5" secondAttribute="height" id="gXi-Yn-561"/>
                             <constraint firstItem="nyX-YN-TEH" firstAttribute="bottom" secondItem="dtW-wf-sC5" secondAttribute="bottom" id="oyg-0W-iD5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dtW-wf-sC5"/>
                     </view>
                     <connections>
-                        <outlet property="protocolScrollView" destination="nyX-YN-TEH" id="k1E-QH-3Ep"/>
+                        <outlet property="protocolLabel" destination="gdn-oI-AaH" id="Ekf-bv-eFB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeh-YH-t3J" userLabel="First Responder" sceneMemberID="firstResponder"/>

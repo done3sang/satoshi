@@ -24,7 +24,10 @@ final class Utility {
         UIGraphicsBeginImageContext(scaledSize)
         image.draw(in: CGRect(x: 0, y: 0, width: scaledWidth, height: scaledHeight))
         
-        return UIGraphicsGetImageFromCurrentImageContext()!
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()!
+        //UIGraphicsEndImageContext()
+        
+        return scaledImage
     }
     
     open class func scaleImageWithWidthFactor(image: UIImage, newSize: CGSize) -> UIImage {
@@ -40,13 +43,57 @@ final class Utility {
         UIGraphicsBeginImageContext(scaledSize)
         image.draw(in: CGRect(x: 0, y: 0, width: scaledWidth, height: scaledHeight))
         
-        return UIGraphicsGetImageFromCurrentImageContext()!
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()!
+        //UIGraphicsEndImageContext()
+        
+        return scaledImage
     }
     
     open class func scaleImageWithoutFactor(image: UIImage, newSize: CGSize) -> UIImage {
         UIGraphicsBeginImageContext(newSize)
         image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
         
-        return UIGraphicsGetImageFromCurrentImageContext()!
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()!
+        
+        //UIGraphicsEndImageContext()
+        return scaledImage
+    }
+    
+    open class func navigationImage(_ rect: CGRect) -> UIImage {
+        /*let context = UIGraphicsGetCurrentContext()
+        let startX = rect.origin.x + rect.width
+        let startY = rect.origin.y + rect.height/2.0
+        
+        context?.move(to: CGPoint(x: startX, y: startY))
+        context?.addLine(to: rect.origin)
+        context?.addLine(to: CGPoint(x: rect.origin.x, y: rect.origin.y + rect.height))
+        context?.closePath()
+        
+        context?.drawPath(using: CGPathDrawingMode.fillStroke)
+ */
+        
+        let startX = rect.origin.x + rect.width
+        let startY = rect.origin.y + rect.height/2.0
+        
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 1.0)
+        
+        let context = UIGraphicsGetCurrentContext()
+        let path = CGMutablePath()
+        
+        path.move(to: CGPoint(x: startX, y: startY))
+        path.addLine(to: rect.origin)
+        path.addLine(to: CGPoint(x: rect.origin.x, y: rect.origin.y + rect.height))
+        context?.addPath(path)
+        context?.setStrokeColor(UIColor.blue.cgColor)
+        context?.setLineWidth(5)
+        context?.move(to: CGPoint(x: startX, y: startY))
+        context?.addLine(to: rect.origin)
+        context?.addLine(to: CGPoint(x: rect.origin.x, y: rect.origin.y + rect.height))
+        context?.strokePath()
+ 
+        let navigationImage =  UIGraphicsGetImageFromCurrentImageContext()!
+        
+        UIGraphicsEndImageContext()
+        return navigationImage
     }
 }

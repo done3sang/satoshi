@@ -24,6 +24,8 @@
 		14D8FE1D20887D24000BB672 /* ProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8FE1C20887D24000BB672 /* ProtocolViewController.swift */; };
 		14D8FE2320888113000BB672 /* Forgot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D8FE2120888112000BB672 /* Forgot.storyboard */; };
 		14D8FE252088812E000BB672 /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8FE242088812E000BB672 /* ForgotViewController.swift */; };
+		14D8FE402089C01D000BB672 /* GotoStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8FE3F2089C01D000BB672 /* GotoStoryboard.swift */; };
+		14D8FE42208A0546000BB672 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8FE41208A0546000BB672 /* MyApp.swift */; };
 		14DA99E22080AFEC00D3BDDD /* AutoPageScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA99E12080AFEC00D3BDDD /* AutoPageScroll.swift */; };
 		14F711382086F68B000A556D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F711362086F68B000A556D /* Login.storyboard */; };
 		14F7113A20870864000A556D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7113920870864000A556D /* LoginViewController.swift */; };
@@ -49,6 +51,8 @@
 		14D8FE1C20887D24000BB672 /* ProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolViewController.swift; sourceTree = "<group>"; };
 		14D8FE2220888112000BB672 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Forgot.storyboard; sourceTree = "<group>"; };
 		14D8FE242088812E000BB672 /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
+		14D8FE3F2089C01D000BB672 /* GotoStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotoStoryboard.swift; sourceTree = "<group>"; };
+		14D8FE41208A0546000BB672 /* MyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
 		14DA99E12080AFEC00D3BDDD /* AutoPageScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoPageScroll.swift; sourceTree = "<group>"; };
 		14F711372086F68B000A556D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		14F7113920870864000A556D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				14DA99E12080AFEC00D3BDDD /* AutoPageScroll.swift */,
+				14D8FE3F2089C01D000BB672 /* GotoStoryboard.swift */,
+				14D8FE41208A0546000BB672 /* MyApp.swift */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -232,10 +238,12 @@
 				14D8FE1D20887D24000BB672 /* ProtocolViewController.swift in Sources */,
 				14DA99E22080AFEC00D3BDDD /* AutoPageScroll.swift in Sources */,
 				147D7BCE2087231C00C43240 /* ProtocolUser.swift in Sources */,
+				14D8FE42208A0546000BB672 /* MyApp.swift in Sources */,
 				141F2BCD207F504E00DC01CB /* AppDelegate.swift in Sources */,
 				14D3714D2084B3C20012670F /* Utility.swift in Sources */,
 				141F2C2A20805D7B00DC01CB /* HomeViewController.swift in Sources */,
 				141F2C2E20805DA500DC01CB /* CartViewController.swift in Sources */,
+				14D8FE402089C01D000BB672 /* GotoStoryboard.swift in Sources */,
 				141F2C3020805DAF00DC01CB /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
