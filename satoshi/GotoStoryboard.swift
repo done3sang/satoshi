@@ -9,11 +9,16 @@
 import UIKit
 
 class GotoStoryboard {
-    open class func gotoLogin(currentviewController: UIViewController, first: Bool = false) {
+    open class func loadStroyboard<V>(_ nibName: String) -> V {
+        let sb = UIStoryboard(name: nibName, bundle: nil)
+        return sb.instantiateViewController(withIdentifier: nibName) as! V
+    }
+    
+    open class func gotoLogin(_ currentViewController: UIViewController, first: Bool = false) {
         let nibName = "Login"
         
         if !first {
-            if let navigationController = currentviewController.navigationController {
+            if let navigationController = currentViewController.navigationController {
                 for viewController in navigationController.viewControllers {
                     if viewController.isKind(of: LoginViewController.self) {
                         navigationController.popToViewController(viewController, animated: true)
@@ -25,18 +30,18 @@ class GotoStoryboard {
         
         let sb = UIStoryboard(name: nibName, bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: nibName) as! LoginViewController
-        currentviewController.hidesBottomBarWhenPushed = true
-        currentviewController.navigationController?.pushViewController(vc, animated: true)
+        currentViewController.hidesBottomBarWhenPushed = true
+        currentViewController.navigationController?.pushViewController(vc, animated: true)
         if first {
-            currentviewController.hidesBottomBarWhenPushed = false
+            currentViewController.hidesBottomBarWhenPushed = false
         }
     }
     
-    open class func gotoRegister(currentviewController: UIViewController, first: Bool = false) {
+    open class func gotoRegister(_ currentViewController: UIViewController, first: Bool = false) {
         let nibName = "Register"
         
         if !first {
-            if let navigationController = currentviewController.navigationController {
+            if let navigationController = currentViewController.navigationController {
                 for viewController in navigationController.viewControllers {
                     if viewController.isKind(of: RegisterViewController.self) {
                         navigationController.popToViewController(viewController, animated: true)
@@ -48,18 +53,18 @@ class GotoStoryboard {
         
         let sb = UIStoryboard(name: nibName, bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: nibName) as! RegisterViewController
-        currentviewController.hidesBottomBarWhenPushed = true
-        currentviewController.navigationController?.pushViewController(vc, animated: true)
+        currentViewController.hidesBottomBarWhenPushed = true
+        currentViewController.navigationController?.pushViewController(vc, animated: true)
         if first {
-            currentviewController.hidesBottomBarWhenPushed = false
+            currentViewController.hidesBottomBarWhenPushed = false
         }
     }
     
-    open class func gotoForgot(currentviewController: UIViewController, first: Bool = false) {
+    open class func gotoForgot(_ currentViewController: UIViewController, first: Bool = false) {
         let nibName = "Forgot"
         
         if !first {
-            if let navigationController = currentviewController.navigationController {
+            if let navigationController = currentViewController.navigationController {
                 for viewController in navigationController.viewControllers {
                     if viewController.isKind(of: ForgotViewController.self) {
                         navigationController.popToViewController(viewController, animated: true)
@@ -71,19 +76,19 @@ class GotoStoryboard {
         
         let sb = UIStoryboard(name: nibName, bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: nibName) as! ForgotViewController
-        currentviewController.hidesBottomBarWhenPushed = true
-        currentviewController.navigationController?.pushViewController(vc, animated: true)
+        currentViewController.hidesBottomBarWhenPushed = true
+        currentViewController.navigationController?.pushViewController(vc, animated: true)
         if first {
-            currentviewController.hidesBottomBarWhenPushed = false
+            currentViewController.hidesBottomBarWhenPushed = false
         }
     }
     
-    open class func gotoProtocol(currentviewController: UIViewController) {
+    open class func gotoProtocol(_ currentViewController: UIViewController) {
         let nibName = "Protocol"
         
         let sb = UIStoryboard(name: nibName, bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: nibName) as! ProtocolViewController
-        currentviewController.hidesBottomBarWhenPushed = true
-        currentviewController.navigationController?.pushViewController(vc, animated: true)
+        currentViewController.hidesBottomBarWhenPushed = true
+        currentViewController.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var accountTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var againPasswordTextField: UITextField!
@@ -20,19 +20,21 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        accountTextField.delegate = self
+        passwordTextField.delegate = self
+        againPasswordTextField.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationController?.navigationBar.tintColor = UIColor.orange
-        self.navigationController?.isNavigationBarHidden = false
+        //self.navigationController?.isNavigationBarHidden = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        self.navigationController?.isNavigationBarHidden = true
+        //self.navigationController?.isNavigationBarHidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,10 +60,36 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func showProtocol() {
-        GotoStoryboard.gotoProtocol(currentviewController: self)
+        MyApp.shared.gotoProtocol(self)
     }
     
     @IBAction func gotoLogin() {
-        GotoStoryboard.gotoLogin(currentviewController: self)
+        MyApp.shared.gotoLogin(self)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let frame = textField.frame
+        let offset = frame.origin.y + frame.height - self.view.frame.height + 216
+        
+        UIView.beginAnimations("ResizeForKeyboard", context: nil)
+        UIView.setAnimationDuration(0.3)
+        if 0 < offset {
+            self.view.frame = CGRect(x: 0, y: -offset, width: self.view.frame.width, height: self.view.frame.height)
+        }
+        UIView.commitAnimations()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        UIView.beginAnimations("ResizeForKeyboard", context: nil)
+        UIView.setAnimationDuration(0.3)
+        if 0 > self.view.frame.origin.y {
+            self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        }
+        UIView.commitAnimations()
     }
 }

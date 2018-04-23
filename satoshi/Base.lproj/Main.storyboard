@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NmB-xY-slq">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,49 +16,49 @@
         <!--Home View Controller-->
         <scene sceneID="czC-Ye-FvK">
             <objects>
-                <viewController id="7Fl-pn-eBu" userLabel="Home View Controller" customClass="HomeViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="主頁" id="7Fl-pn-eBu" userLabel="Home View Controller" customClass="HomeViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zoj-Jy-hgz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="UjU-ev-kkq" userLabel="Logo">
-                                <rect key="frame" x="0.0" y="52" width="40" height="40"/>
+                                <rect key="frame" x="0.0" y="28" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="aPC-n1-iM7"/>
                                     <constraint firstAttribute="width" constant="40" id="go1-GW-BAc"/>
                                 </constraints>
                             </imageView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="商品搜尋" translatesAutoresizingMaskIntoConstraints="NO" id="ebR-zZ-OVc" userLabel="SearchBar">
-                                <rect key="frame" x="40" y="44" width="335" height="56"/>
+                                <rect key="frame" x="40" y="20" width="280" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuB-7q-Ass" userLabel="HomeScrollView">
-                                <rect key="frame" x="0.0" y="100" width="375" height="585"/>
+                                <rect key="frame" x="0.0" y="76" width="320" height="311"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50p-kC-bxc" userLabel="BannerScrollView">
-                                        <rect key="frame" x="38" y="0.0" width="299" height="119.66666666666667"/>
+                                        <rect key="frame" x="38" y="0.0" width="244" height="97.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="50p-kC-bxc" secondAttribute="height" multiplier="5:2" id="DfH-NN-fgs"/>
                                         </constraints>
                                     </scrollView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="A0A-6f-RBV" userLabel="BannerPageControl">
-                                        <rect key="frame" x="168" y="82.666666666666657" width="39" height="37"/>
+                                        <rect key="frame" x="140.5" y="60.5" width="39" height="37"/>
                                         <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="currentPageIndicatorTintColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                                     </pageControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SsE-Md-lkt" userLabel="MainStackView">
-                                        <rect key="frame" x="0.0" y="124.66666666666666" width="375" height="84"/>
+                                        <rect key="frame" x="0.0" y="102.5" width="320" height="84"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xTI-qu-IK8" userLabel="WifiStackView">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="84"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="84"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNI-lG-nM7" userLabel="WiFiButton">
-                                                        <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="64"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="64"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="wifi"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WiFi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbD-uI-rLK" userLabel="WiFiLabel">
-                                                        <rect key="frame" x="0.0" y="64.000000000000028" width="93.666666666666671" height="20"/>
+                                                        <rect key="frame" x="0.0" y="64" width="80" height="20"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -71,15 +71,15 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7l5-Y5-YhN" userLabel="HotelStackView">
-                                                <rect key="frame" x="93.666666666666686" y="0.0" width="94" height="84"/>
+                                                <rect key="frame" x="80" y="0.0" width="80" height="84"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZv-B0-gV8" userLabel="HotelButton">
-                                                        <rect key="frame" x="0.0" y="0.0" width="94" height="64"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="64"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="hotel"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="酒店" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g53-IL-ApZ" userLabel="HotelLabel">
-                                                        <rect key="frame" x="0.0" y="64.000000000000028" width="94" height="20"/>
+                                                        <rect key="frame" x="0.0" y="64" width="80" height="20"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -91,15 +91,15 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y6x-EL-Px7" userLabel="TicketStackView">
-                                                <rect key="frame" x="187.66666666666666" y="0.0" width="93.666666666666657" height="84"/>
+                                                <rect key="frame" x="160" y="0.0" width="80" height="84"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytV-bV-2cd" userLabel="TicketButton">
-                                                        <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="64"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="64"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="ticket"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="票卷" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVt-gM-6eE" userLabel="TicketLabel">
-                                                        <rect key="frame" x="0.0" y="64.000000000000028" width="93.666666666666671" height="20"/>
+                                                        <rect key="frame" x="0.0" y="64" width="80" height="20"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -111,15 +111,15 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xbb-Fd-NAi" userLabel="MallStackView">
-                                                <rect key="frame" x="281.33333333333331" y="0.0" width="93.666666666666686" height="84"/>
+                                                <rect key="frame" x="240" y="0.0" width="80" height="84"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHp-da-OYw" userLabel="MallButton">
-                                                        <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="64"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="64"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="mall"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商城" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1k5-5Q-kDq" userLabel="MallLabel">
-                                                        <rect key="frame" x="0.0" y="64.000000000000028" width="93.666666666666671" height="20"/>
+                                                        <rect key="frame" x="0.0" y="64" width="80" height="20"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -137,14 +137,14 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiY-cj-9A3" userLabel="BuyWiFiButton">
-                                        <rect key="frame" x="0.0" y="213.66666666666669" width="375" height="211"/>
+                                        <rect key="frame" x="0.0" y="191.5" width="320" height="180"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="NiY-cj-9A3" secondAttribute="height" multiplier="750:422" id="LOa-P1-OHe"/>
                                         </constraints>
                                         <state key="normal" image="buywifi"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8g-l8-V3N" userLabel="BuyTrafficButton">
-                                        <rect key="frame" x="0.0" y="429.66666666666657" width="375" height="211.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="376.5" width="320" height="180.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="J8g-l8-V3N" secondAttribute="height" multiplier="750:422" id="qVq-DF-Peo"/>
                                         </constraints>
@@ -189,6 +189,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="首頁" image="home" selectedImage="home_selected" id="4Jk-AT-Xj6" userLabel="Home"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Azg-ie-wD6"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bannerPageControl" destination="A0A-6f-RBV" id="kst-Ru-I0B"/>
@@ -203,18 +204,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23p-0n-J21" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-396" y="-2262.5615763546798"/>
+            <point key="canvasLocation" x="884" y="-2270"/>
+        </scene>
+        <!--Home Navigation View Controller-->
+        <scene sceneID="hy3-AM-QE2">
+            <objects>
+                <navigationController title="主頁" navigationBarHidden="YES" id="fzh-7G-PaX" userLabel="Home Navigation View Controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="主頁" image="home" id="rUm-ry-zwP" userLabel="HomeNav"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NHs-sJ-Mkv">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7Fl-pn-eBu" kind="relationship" relationship="rootViewController" id="dlm-e5-6SQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7x6-QJ-OIl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-386" y="-2271"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="Hxo-Qd-p7t">
             <objects>
-                <viewController id="MjN-YB-meA" userLabel="Category View Controller" customClass="CategoryViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="商品分類" id="MjN-YB-meA" userLabel="Category View Controller" customClass="CategoryViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vLf-fA-ASm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4f3-4E-8ux" userLabel="MenuTableView">
-                                <rect key="frame" x="0.0" y="44" width="98" height="685"/>
+                                <rect key="frame" x="0.0" y="64" width="52.5" height="367"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4f3-4E-8ux" secondAttribute="height" multiplier="1:7" id="X60-tY-VM5"/>
@@ -222,7 +239,7 @@
                                 <sections/>
                             </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L1I-lT-E1Y" userLabel="ItemCollectionView">
-                                <rect key="frame" x="98" y="44" width="277" height="685"/>
+                                <rect key="frame" x="52.5" y="64" width="267.5" height="367"/>
                                 <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Nwk-W0-9lP">
                                     <size key="itemSize" width="120" height="128"/>
@@ -288,6 +305,7 @@
                         <viewLayoutGuide key="safeArea" id="608-ev-gou"/>
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="分類" image="category" selectedImage="category_selected" id="gjp-HB-JEG" userLabel="Category"/>
+                    <navigationItem key="navigationItem" id="ncM-Ep-Dx4"/>
                     <connections>
                         <outlet property="collectionView" destination="L1I-lT-E1Y" id="QPW-SG-6d9"/>
                         <outlet property="tableView" destination="4f3-4E-8ux" id="aW2-hO-wa8"/>
@@ -295,14 +313,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8v9-kO-dGx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-386.39999999999998" y="-1559.8522167487686"/>
+            <point key="canvasLocation" x="884" y="-1569"/>
+        </scene>
+        <!--CategoryNavigationViewController-->
+        <scene sceneID="DnG-pz-OKB">
+            <objects>
+                <navigationController title="商品分類" id="oYp-0i-naC" userLabel="CategoryNavigationViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="分類" image="category" id="0xJ-YY-IYw" userLabel="CategoryNav"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="12o-yO-yrm">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MjN-YB-meA" kind="relationship" relationship="rootViewController" id="9iL-eD-xMQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CMx-9f-d64" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-386" y="-1568"/>
         </scene>
         <!--Cart View Controller-->
         <scene sceneID="5QX-7o-nn1">
             <objects>
                 <viewController title="購物車" id="qB4-YS-1Ny" userLabel="Cart View Controller" customClass="CartViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RYs-aF-vAa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ptz-Y2-WWQ"/>
@@ -314,12 +349,13 @@
             </objects>
             <point key="canvasLocation" x="884" y="-846"/>
         </scene>
-        <!--Cart Navigation View-->
+        <!--Cart Navigation View Controller-->
         <scene sceneID="Ow9-5V-9Uy">
             <objects>
-                <navigationController title="購物車" navigationBarHidden="YES" id="kAq-41-suG" userLabel="Cart Navigation View" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="購物車" selectedImage="cart" id="1Nj-0P-K4z" userLabel="CartNav"/>
+                <navigationController title="購物車" id="kAq-41-suG" userLabel="Cart Navigation View Controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="購物車" image="cart" selectedImage="cart" id="1Nj-0P-K4z" userLabel="CartNav"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4l1-Dj-xdG">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -335,33 +371,33 @@
             <objects>
                 <viewController title="會員中心" id="4Km-HJ-E76" userLabel="Mine View Controller" customClass="MineViewController" customModule="satoshi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FQo-bB-Vcf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nbB-fS-hVe" userLabel="MineBackground">
-                                <rect key="frame" x="0.0" y="88.000000000000014" width="375" height="200.33333333333337"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="171"/>
                                 <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nbB-fS-hVe" secondAttribute="height" multiplier="375:200" id="JQX-X8-19v"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="ihc-2W-Rd9" userLabel="MineIcon">
-                                <rect key="frame" x="150" y="98" width="75" height="75.666666666666686"/>
+                                <rect key="frame" x="128" y="74" width="64" height="64.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ihc-2W-Rd9" secondAttribute="height" multiplier="1:1" id="eh0-md-O0T"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="avO-74-Osf">
-                                <rect key="frame" x="0.0" y="251.00000000000003" width="375" height="37.333333333333343"/>
+                                <rect key="frame" x="0.0" y="203" width="320" height="32"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydn-og-Gdh" userLabel="MoneyButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="37.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="32"/>
                                         <state key="normal" title="餘額 0">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSn-Cg-DK4" userLabel="PointButton">
-                                        <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="37.333333333333336"/>
+                                        <rect key="frame" x="160" y="0.0" width="160" height="32"/>
                                         <state key="normal" title="積分 0">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -373,7 +409,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E31-aH-oA1" userLabel="LoginButton">
-                                <rect key="frame" x="23" y="188.66666666666666" width="140" height="30"/>
+                                <rect key="frame" x="0.0" y="153.5" width="135.5" height="29"/>
                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="E31-aH-oA1" secondAttribute="height" multiplier="14:3" id="aRM-Mq-GLb"/>
@@ -384,7 +420,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfi-9e-QHb" userLabel="RegisterButton">
-                                <rect key="frame" x="213" y="188.66666666666666" width="139.66666666666663" height="30"/>
+                                <rect key="frame" x="185.5" y="153.5" width="134.5" height="29"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Pfi-9e-QHb" secondAttribute="height" multiplier="14:3" id="ee9-x6-svx"/>
@@ -395,31 +431,31 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQQ-Be-AcI" userLabel="MineScrollView">
-                                <rect key="frame" x="0.0" y="288.33333333333326" width="375" height="396.66666666666674"/>
+                                <rect key="frame" x="0.0" y="235" width="320" height="152"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HxX-4N-ZUl" userLabel="OrderView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="71.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="27.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaV-HL-MQB" userLabel="OrderButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="71.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="27.5"/>
                                                 <connections>
                                                     <action selector="gotoOrder" destination="4Km-HJ-E76" eventType="touchUpInside" id="Fg5-HX-mkO"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mall" translatesAutoresizingMaskIntoConstraints="NO" id="d2R-0q-VMb" userLabel="OrderIcon">
-                                                <rect key="frame" x="10" y="17.666666666666689" width="35.666666666666664" height="35.333333333333343"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="member_order" translatesAutoresizingMaskIntoConstraints="NO" id="d2R-0q-VMb" userLabel="OrderIcon">
+                                                <rect key="frame" x="10" y="6.5" width="13.5" height="13.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="d2R-0q-VMb" secondAttribute="height" multiplier="1:1" id="jCK-8K-wxU"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的訂單" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54B-cX-HBI" userLabel="OrderLabel">
-                                                <rect key="frame" x="55.666666666666664" y="25.333333333333371" width="69.333333333333343" height="20.333333333333329"/>
+                                                <rect key="frame" x="33.5" y="3" width="69.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigation" translatesAutoresizingMaskIntoConstraints="NO" id="cl8-3M-OEg" userLabel="OrderNavigation">
-                                                <rect key="frame" x="324.33333333333331" y="18.333333333333368" width="35.666666666666686" height="35.666666666666657"/>
+                                                <rect key="frame" x="291.5" y="7.5" width="13.5" height="13.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="cl8-3M-OEg" secondAttribute="height" multiplier="1:1" id="H2Q-tg-06d"/>
                                                 </constraints>
@@ -444,28 +480,28 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yMO-gN-1FB" userLabel="AddressView">
-                                        <rect key="frame" x="0.0" y="73.333333333333371" width="375" height="71.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="29.5" width="320" height="27.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uw7-KB-ekH" userLabel="AddressButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="71.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="27.5"/>
                                                 <connections>
                                                     <action selector="gotoAddress" destination="4Km-HJ-E76" eventType="touchUpInside" id="ZuU-BA-CPO"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotel" translatesAutoresizingMaskIntoConstraints="NO" id="k1q-al-R2X" userLabel="AddressIcon">
-                                                <rect key="frame" x="10" y="18" width="36.333333333333336" height="36"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="member_address" translatesAutoresizingMaskIntoConstraints="NO" id="k1q-al-R2X" userLabel="AddressIcon">
+                                                <rect key="frame" x="10" y="7" width="14.5" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="k1q-al-R2X" secondAttribute="height" multiplier="1:1" id="Ib0-Ug-wvp"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址管理" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsw-0Y-7LD" userLabel="AddressLabel">
-                                                <rect key="frame" x="56.333333333333336" y="25.666666666666629" width="69.333333333333314" height="20.333333333333329"/>
+                                                <rect key="frame" x="34.5" y="3.5" width="69.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigation" translatesAutoresizingMaskIntoConstraints="NO" id="dlc-C3-zcq" userLabel="AddressNavigation">
-                                                <rect key="frame" x="323.66666666666669" y="18" width="36.333333333333314" height="36"/>
+                                                <rect key="frame" x="290.5" y="7" width="14.5" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="dlc-C3-zcq" secondAttribute="height" multiplier="1:1" id="dkq-80-Lcm"/>
                                                 </constraints>
@@ -489,28 +525,28 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Vq-6U-Nc0" userLabel="MoneyView">
-                                        <rect key="frame" x="0.0" y="155" width="375" height="72.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="67" width="320" height="28"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmX-RN-QjC" userLabel="MoneyButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="71.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="27.5"/>
                                                 <connections>
                                                     <action selector="gotoMoney" destination="4Km-HJ-E76" eventType="touchUpInside" id="g5f-Bb-Zpf"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticket" translatesAutoresizingMaskIntoConstraints="NO" id="0rH-w1-49M" userLabel="MoneyIcon">
-                                                <rect key="frame" x="10" y="18.000000000000004" width="37" height="36.333333333333343"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="member_money" translatesAutoresizingMaskIntoConstraints="NO" id="0rH-w1-49M" userLabel="MoneyIcon">
+                                                <rect key="frame" x="10" y="7" width="14" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="0rH-w1-49M" secondAttribute="height" id="ExZ-Sx-YIY"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的餘額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czl-Xw-rE7" userLabel="MoneyLabel">
-                                                <rect key="frame" x="56.999999999999993" y="26" width="69.333333333333314" height="20.333333333333329"/>
+                                                <rect key="frame" x="34" y="4" width="69.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigation" translatesAutoresizingMaskIntoConstraints="NO" id="buh-YY-tGg" userLabel="MoneyNavigation">
-                                                <rect key="frame" x="324.33333333333331" y="17.999999999999996" width="35.666666666666686" height="35.666666666666657"/>
+                                                <rect key="frame" x="291.5" y="7" width="13.5" height="13.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="buh-YY-tGg" secondAttribute="height" multiplier="1:1" id="1vt-gm-yzM"/>
                                                 </constraints>
@@ -534,28 +570,28 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yV-fA-NCc" userLabel="DeviceView">
-                                        <rect key="frame" x="0.0" y="229.33333333333331" width="375" height="72"/>
+                                        <rect key="frame" x="0.0" y="97" width="320" height="28"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ooe-4o-7sQ" userLabel="DeviceButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="28"/>
                                                 <connections>
                                                     <action selector="gotoDevice" destination="4Km-HJ-E76" eventType="touchUpInside" id="UzS-58-gfA"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi" translatesAutoresizingMaskIntoConstraints="NO" id="YXD-0K-ZOD" userLabel="DeviceIcon">
-                                                <rect key="frame" x="10" y="18.333333333333368" width="35.666666666666664" height="35.666666666666657"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="member_device" translatesAutoresizingMaskIntoConstraints="NO" id="YXD-0K-ZOD" userLabel="DeviceIcon">
+                                                <rect key="frame" x="10" y="7.5" width="13.5" height="13.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="YXD-0K-ZOD" secondAttribute="height" multiplier="1:1" id="Pij-cf-Eq1"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的設備" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmM-iP-aAp" userLabel="DeviceLabel">
-                                                <rect key="frame" x="55.666666666666664" y="25.666666666666742" width="69.333333333333343" height="20.333333333333329"/>
+                                                <rect key="frame" x="33.5" y="4" width="69.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigation" translatesAutoresizingMaskIntoConstraints="NO" id="1IV-Mg-Zqk" userLabel="DeviceNavigation">
-                                                <rect key="frame" x="324.33333333333331" y="18.333333333333368" width="35.666666666666686" height="35.666666666666657"/>
+                                                <rect key="frame" x="291.5" y="7.5" width="13.5" height="13.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="1IV-Mg-Zqk" secondAttribute="height" multiplier="1:1" id="to0-NO-WUR"/>
                                                 </constraints>
@@ -579,28 +615,28 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxA-Hz-w9L" userLabel="AboutView">
-                                        <rect key="frame" x="0.0" y="311.33333333333331" width="375" height="72"/>
+                                        <rect key="frame" x="0.0" y="135" width="320" height="28"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsH-0Z-jNs" userLabel="AboutButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="28"/>
                                                 <connections>
                                                     <action selector="gotoAbout" destination="4Km-HJ-E76" eventType="touchUpInside" id="bd7-hS-bAL"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine" translatesAutoresizingMaskIntoConstraints="NO" id="sc3-oY-dIg" userLabel="AboutIcon">
-                                                <rect key="frame" x="10" y="18.000000000000004" width="36.333333333333336" height="36.333333333333343"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="member_about" translatesAutoresizingMaskIntoConstraints="NO" id="sc3-oY-dIg" userLabel="AboutIcon">
+                                                <rect key="frame" x="10" y="7" width="14.5" height="14.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="sc3-oY-dIg" secondAttribute="height" multiplier="1:1" id="Ysh-we-5xT"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="關於我們" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqZ-NK-fcJ" userLabel="AboutLabel">
-                                                <rect key="frame" x="56.333333333333336" y="26" width="69.333333333333314" height="20.333333333333329"/>
+                                                <rect key="frame" x="34.5" y="4" width="69.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigation" translatesAutoresizingMaskIntoConstraints="NO" id="vct-Y5-UlM" userLabel="AboutNavigation">
-                                                <rect key="frame" x="323.66666666666669" y="18.333333333333371" width="36.333333333333314" height="36"/>
+                                                <rect key="frame" x="290.5" y="7.5" width="14.5" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="vct-Y5-UlM" secondAttribute="height" multiplier="1:1" id="xpz-rj-mvM"/>
                                                 </constraints>
@@ -683,7 +719,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FEu-9P-xrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="884" y="-172"/>
+            <point key="canvasLocation" x="884" y="-172.16748768472908"/>
         </scene>
         <!--Mine Navigation View Controller-->
         <scene sceneID="MCO-da-aK8">
@@ -691,7 +727,7 @@
                 <navigationController id="8JI-E8-mrU" userLabel="Mine Navigation View Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我的" image="mine" selectedImage="mine_selected" id="j6j-il-WTf" userLabel="Mine"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xAa-o0-Kiy">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -713,10 +749,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="7Fl-pn-eBu" kind="relationship" relationship="viewControllers" id="ZRO-8M-SaZ"/>
-                        <segue destination="MjN-YB-meA" kind="relationship" relationship="viewControllers" id="pkK-nG-qg1"/>
-                        <segue destination="kAq-41-suG" kind="relationship" relationship="viewControllers" id="GCT-Rc-8IB"/>
-                        <segue destination="8JI-E8-mrU" kind="relationship" relationship="viewControllers" id="5fI-tt-TtT"/>
+                        <segue destination="fzh-7G-PaX" kind="relationship" relationship="viewControllers" id="tve-TY-QgS"/>
+                        <segue destination="oYp-0i-naC" kind="relationship" relationship="viewControllers" id="Hue-4s-sYu"/>
+                        <segue destination="kAq-41-suG" kind="relationship" relationship="viewControllers" id="Pul-g1-lO8"/>
+                        <segue destination="8JI-E8-mrU" kind="relationship" relationship="viewControllers" id="IGt-Ag-3T6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l2u-Wu-AEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -738,6 +774,11 @@
         <image name="logo" width="112" height="111"/>
         <image name="mall" width="50" height="50"/>
         <image name="mallitem" width="1200" height="675"/>
+        <image name="member_about" width="60" height="60"/>
+        <image name="member_address" width="60" height="60"/>
+        <image name="member_device" width="60" height="60"/>
+        <image name="member_money" width="60" height="60"/>
+        <image name="member_order" width="60" height="60"/>
         <image name="mine" width="29" height="27"/>
         <image name="mine_selected" width="29" height="27"/>
         <image name="navigation" width="30" height="30"/>

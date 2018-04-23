@@ -15,10 +15,10 @@ class MineViewController: UIViewController {
         // Do any additional setup after loading the view.
         let attr = [NSAttributedStringKey.foregroundColor: UIColor.orange]
         tabBarItem.setTitleTextAttributes(attr, for: UIControlState.selected)
-        
         self.navigationController?.tabBarItem?.setTitleTextAttributes(attr, for: UIControlState.selected)
+
+        self.title = MyApp.shared.languageStringByKey("mineTitle")
         
-        self.title = "我的"
         self.navigationController?.isNavigationBarHidden = true
     }
     
@@ -28,40 +28,44 @@ class MineViewController: UIViewController {
     }
 
     @IBAction func gotoRegister() {
-        let nibName = "Register"
-        let sb = UIStoryboard(name: nibName, bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: nibName) as! RegisterViewController
-        self.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
-        self.hidesBottomBarWhenPushed = false
+        MyApp.shared.gotoRegister(self, first: true)
     }
     
     @IBAction func gotoLogin() {
-        let nibName = "Login"
-        let sb = UIStoryboard(name: nibName, bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: nibName) as! LoginViewController
-        self.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
-        self.hidesBottomBarWhenPushed = false
+        MyApp.shared.gotoLogin(self, first: true)
     }
     
     @IBAction func gotoOrder() {
-        print("gotoOrder")
+        if MyApp.shared.checkUserLogged(self) {
+            
+        }
     }
     
     @IBAction func gotoAddress() {
-        print("gotoAddress")
+        if MyApp.shared.checkUserLogged(self) {
+            
+        }
     }
     
     @IBAction func gotoMoney() {
-        print("gotoMoney")
+        if MyApp.shared.checkUserLogged(self) {
+            
+        }
     }
     
     @IBAction func gotoDevice() {
-        print("gotoDevice")
+        if MyApp.shared.checkUserLogged(self) {
+            
+        }
     }
     
     @IBAction func gotoAbout() {
-        print("gotoAbout")
+        let nibName = "About"
+        let sb = UIStoryboard(name: nibName, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: nibName) as! AboutViewController
+        
+        self.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
+        self.hidesBottomBarWhenPushed = false
     }
 }

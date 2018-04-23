@@ -1,4 +1,7 @@
 
+/* Class = "UIViewController"; title = "會員登錄"; ObjectID = "37K-V3-eLb"; */
+"37K-V3-eLb.title" = "會員登錄";
+
 /* Class = "UILabel"; text = "帳號"; ObjectID = "FPu-3w-lMy"; */
 "FPu-3w-lMy.text" = "帳號";
 
@@ -19,6 +22,9 @@
 
 /* Class = "UITextField"; placeholder = "郵箱地址"; ObjectID = "eQQ-sU-OG4"; */
 "eQQ-sU-OG4.placeholder" = "郵箱地址";
+
+/* Class = "UIButton"; normalTitle = "Switch"; ObjectID = "kFV-m9-rrz"; */
+"kFV-m9-rrz.normalTitle" = "Switch";
 
 /* Class = "UIButton"; normalTitle = "登入"; ObjectID = "rdG-NY-iN0"; */
 "rdG-NY-iN0.normalTitle" = "登入";

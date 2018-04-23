@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ForgotViewController: UIViewController {
+class ForgotViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet var accountTextField: UITextField!
+    @IBOutlet var codeTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var againPasswordTextField: UITextField!
     @IBOutlet var getCodeButton: UIButton!
@@ -17,6 +19,10 @@ class ForgotViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        accountTextField.delegate = self
+        codeTextField.delegate = self
+        passwordTextField.delegate = self
+        againPasswordTextField.delegate = self
         
         getCodeButton.layer.borderColor = UIColor.clear.cgColor
         getCodeButton.layer.borderWidth = 5
@@ -27,13 +33,13 @@ class ForgotViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.navigationController?.navigationBar.tintColor = UIColor.orange
-        self.navigationController?.isNavigationBarHidden = false
+        //self.navigationController?.isNavigationBarHidden = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        self.navigationController?.isNavigationBarHidden = true
+        //self.navigationController?.isNavigationBarHidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,38 +64,36 @@ class ForgotViewController: UIViewController {
     }
     
     @IBAction func gotoRegister() {
-        let nibName = "Register"
-        if let navigationController = self.navigationController {
-            for viewController in navigationController.viewControllers {
-                if viewController.isKind(of: RegisterViewController.self) {
-                    navigationController.popToViewController(viewController, animated: true)
-                    return
-                }
-            }
-        }
-        
-        let sb = UIStoryboard(name: nibName, bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: nibName) as! RegisterViewController
-        self.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
-        //self.hidesBottomBarWhenPushed = false
+        MyApp.shared.gotoRegister(self)
     }
     
     @IBAction func gotoLogin() {
-        let nibName = "Login"
-        if let navigationController = self.navigationController {
-            for viewController in navigationController.viewControllers {
-                if viewController.isKind(of: LoginViewController.self) {
-                    navigationController.popToViewController(viewController, animated: true)
-                    return
-                }
-            }
-        }
+        MyApp.shared.gotoLogin(self)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let frame = textField.frame
+        let offset = frame.origin.y + frame.height - self.view.frame.height + 216
         
-        let sb = UIStoryboard(name: nibName, bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: nibName) as! LoginViewController
-        self.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
-        //self.hidesBottomBarWhenPushed = false
+        UIView.beginAnimations("ResizeForKeyboard", context: nil)
+        UIView.setAnimationDuration(0.3)
+        if 0 < offset {
+            self.view.frame = CGRect(x: 0, y: -offset, width: self.view.frame.width, height: self.view.frame.height)
+        }
+        UIView.commitAnimations()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        UIView.beginAnimations("ResizeForKeyboard", context: nil)
+        UIView.setAnimationDuration(0.3)
+        if 0 > self.view.frame.origin.y {
+            self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        }
+        UIView.commitAnimations()
     }
 }

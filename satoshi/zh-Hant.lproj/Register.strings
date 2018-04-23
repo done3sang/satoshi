@@ -1,0 +1,30 @@
+
+/* Class = "UIViewController"; title = "會員註冊"; ObjectID = "37K-V3-eLb"; */
+"37K-V3-eLb.title" = "會員註冊";
+
+/* Class = "UITextField"; placeholder = "設置6-15位登陸密碼"; ObjectID = "HGI-WU-uQH"; */
+"HGI-WU-uQH.placeholder" = "設置6-15位登陸密碼";
+
+/* Class = "UIButton"; normalTitle = "Switch"; ObjectID = "RAt-4j-GYm"; */
+"RAt-4j-GYm.normalTitle" = "Switch";
+
+/* Class = "UIButton"; normalTitle = "是"; ObjectID = "Tzt-hg-OJF"; */
+"Tzt-hg-OJF.normalTitle" = "是";
+
+/* Class = "UILabel"; text = "會員註冊"; ObjectID = "UGL-ZH-jHU"; */
+"UGL-ZH-jHU.text" = "會員註冊";
+
+/* Class = "UIButton"; normalTitle = "立即登陸"; ObjectID = "XIY-n6-Za0"; */
+"XIY-n6-Za0.normalTitle" = "立即登陸";
+
+/* Class = "UITextField"; placeholder = "請再次輸入密碼"; ObjectID = "cbd-gC-mIb"; */
+"cbd-gC-mIb.placeholder" = "請再次輸入密碼";
+
+/* Class = "UITextField"; placeholder = "郵箱地址"; ObjectID = "eQQ-sU-OG4"; */
+"eQQ-sU-OG4.placeholder" = "郵箱地址";
+
+/* Class = "UIButton"; normalTitle = "Switch"; ObjectID = "kFV-m9-rrz"; */
+"kFV-m9-rrz.normalTitle" = "Switch";
+
+/* Class = "UIButton"; normalTitle = "註冊"; ObjectID = "rdG-NY-iN0"; */
+"rdG-NY-iN0.normalTitle" = "註冊";

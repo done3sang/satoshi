@@ -168,7 +168,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="registerUser" destination="37K-V3-eLb" eventType="touchUpInside" id="eFc-FM-JvJ"/>
                                     <action selector="resetPassword" destination="37K-V3-eLb" eventType="touchUpInside" id="dqO-JF-PkF"/>
                                 </connections>
                             </button>
@@ -177,7 +176,6 @@
                                 <state key="normal" title="註冊會員"/>
                                 <connections>
                                     <action selector="gotoRegister" destination="37K-V3-eLb" eventType="touchUpInside" id="Sjx-4k-swe"/>
-                                    <action selector="readProtocol" destination="37K-V3-eLb" eventType="touchUpInside" id="mD5-1x-jw2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIY-n6-Za0" userLabel="LoginButton">
@@ -259,7 +257,9 @@
                         <viewLayoutGuide key="safeArea" id="Pz3-ZB-BSB"/>
                     </view>
                     <connections>
+                        <outlet property="accountTextField" destination="eQQ-sU-OG4" id="fl9-Gq-Ced"/>
                         <outlet property="againPasswordTextField" destination="cbd-gC-mIb" id="H9d-nb-qzE"/>
+                        <outlet property="codeTextField" destination="xsp-d7-rZv" id="EXb-ti-Me0"/>
                         <outlet property="getCodeButton" destination="l7F-7m-Lz0" id="RwQ-gA-3HV"/>
                         <outlet property="passwordTextField" destination="HGI-WU-uQH" id="RCh-bc-oFQ"/>
                         <outlet property="searchDisplayController" destination="y3H-Lm-LKu" id="TNe-JN-8ot"/>

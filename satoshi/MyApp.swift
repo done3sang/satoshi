@@ -7,13 +7,123 @@
 //
 
 import Foundation
+import UIKit
 
 class MyApp {
-    open class func checkUserLogged(showAlert: Bool = true) -> Bool {
-        if showAlert && !ProtocolUser.shared.logged {
-            
+    static var shared: MyApp = MyApp()
+    
+    func loadStroyboard<V>(_ nibName: String) -> V {
+        let sb = UIStoryboard(name: nibName, bundle: nil)
+        return sb.instantiateViewController(withIdentifier: nibName) as! V
+    }
+    
+    func gotoLogin(_ currentViewController: UIViewController, first: Bool = false) {
+        let nibName = "Login"
+        
+        if !first {
+            if let navigationController = currentViewController.navigationController {
+                for viewController in navigationController.viewControllers {
+                    if viewController.isKind(of: LoginViewController.self) {
+                        navigationController.popToViewController(viewController, animated: true)
+                        return
+                    }
+                }
+            }
         }
         
-        return false
+        let sb = UIStoryboard(name: nibName, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: nibName) as! LoginViewController
+        currentViewController.hidesBottomBarWhenPushed = true
+        currentViewController.navigationController?.pushViewController(vc, animated: true)
+        if first {
+            currentViewController.hidesBottomBarWhenPushed = false
+        }
+    }
+    
+    func gotoRegister(_ currentViewController: UIViewController, first: Bool = false) {
+        let nibName = "Register"
+        
+        if !first {
+            if let navigationController = currentViewController.navigationController {
+                for viewController in navigationController.viewControllers {
+                    if viewController.isKind(of: RegisterViewController.self) {
+                        navigationController.popToViewController(viewController, animated: true)
+                        return
+                    }
+                }
+            }
+        }
+        
+        let sb = UIStoryboard(name: nibName, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: nibName) as! RegisterViewController
+        currentViewController.hidesBottomBarWhenPushed = true
+        currentViewController.navigationController?.pushViewController(vc, animated: true)
+        if first {
+            currentViewController.hidesBottomBarWhenPushed = false
+        }
+    }
+    
+    func gotoForgot(_ currentViewController: UIViewController, first: Bool = false) {
+        let nibName = "Forgot"
+        
+        if !first {
+            if let navigationController = currentViewController.navigationController {
+                for viewController in navigationController.viewControllers {
+                    if viewController.isKind(of: ForgotViewController.self) {
+                        navigationController.popToViewController(viewController, animated: true)
+                        return
+                    }
+                }
+            }
+        }
+        
+        let sb = UIStoryboard(name: nibName, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: nibName) as! ForgotViewController
+        currentViewController.hidesBottomBarWhenPushed = true
+        currentViewController.navigationController?.pushViewController(vc, animated: true)
+        if first {
+            currentViewController.hidesBottomBarWhenPushed = false
+        }
+    }
+    
+    func gotoProtocol(_ currentViewController: UIViewController) {
+        let nibName = "Protocol"
+        
+        let sb = UIStoryboard(name: nibName, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: nibName) as! ProtocolViewController
+        currentViewController.hidesBottomBarWhenPushed = true
+        currentViewController.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func gotoWebsite(_ currentViewController: UIViewController, urlLink: String, title: String) {
+        let viewController = WebsiteViewController()
+        
+        viewController.title = title
+        viewController.loadUrl(urlLink)
+        viewController.hidesBottomBarWhenPushed = true
+        currentViewController.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func checkUserLogged(_ viewController: UIViewController, showAlert: Bool = true, okFunc: (() -> Void)? = nil, cancelFunc: (() -> Void)? = nil) -> Bool {
+        if showAlert && !ProtocolUser.shared.logged {
+            let alertController = UIAlertController(title: NSLocalizedString("userLoginTitle", comment: ""), message: NSLocalizedString("userLoginMessage", comment: ""), preferredStyle: UIAlertControllerStyle.alert)
+            let cancelAction = UIAlertAction(title: NSLocalizedString("userLoginCancel", comment: ""), style:UIAlertActionStyle.destructive) { (_ : UIAlertAction) in cancelFunc?() }
+            let okAction = UIAlertAction(title: NSLocalizedString("userLoginOk", comment: ""), style: UIAlertActionStyle.default) { (_ : UIAlertAction) in
+                if nil != okFunc {
+                    okFunc!()
+                } else {
+                    MyApp.shared.gotoLogin(viewController, first: true)
+                }
+            }
+            alertController.addAction(cancelAction)
+            alertController.addAction(okAction)
+            viewController.present(alertController, animated: true)
+        }
+        
+        return ProtocolUser.shared.logged
+    }
+    
+    func languageStringByKey(_ stringKey: String) -> String {
+        return NSLocalizedString(stringKey, comment: "From localized strings")
     }
 }

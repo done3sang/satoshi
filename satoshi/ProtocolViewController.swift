@@ -26,13 +26,13 @@ class ProtocolViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.navigationController?.navigationBar.tintColor = UIColor.orange
-        self.navigationController?.isNavigationBarHidden = false
+        //self.navigationController?.isNavigationBarHidden = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        self.navigationController?.isNavigationBarHidden = true
+        //self.navigationController?.isNavigationBarHidden = true
     }
     
     override func didReceiveMemoryWarning() {

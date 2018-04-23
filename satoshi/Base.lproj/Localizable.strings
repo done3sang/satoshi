@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  satoshi
+
+  Created by xy on 23/04/2018.
+  Copyright © 2018 xy. All rights reserved.
+*/
+
+"userLoginTitle" = "登陸提示";
+"userLoginMessage" = "您還未登錄，是否前往登陸？";
+"userLoginCancel" = "不了，謝謝";
+"userLoginOk" = "立即登陸";
+"homeTitle" = "主頁";
+"categoryBarTitle" = "分類";
+"categoryTitle" = "商品分類";
+"cartTitle" = "購物車";
+"mineTitle" = "我的";
