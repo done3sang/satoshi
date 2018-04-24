@@ -15,7 +15,7 @@ class CartViewController: UIViewController {
         // Do any additional setup after loading the view.
         let attr = [NSAttributedStringKey.foregroundColor: UIColor.orange]
         tabBarItem.setTitleTextAttributes(attr, for: UIControlState.selected)
-        self.navigationController?.navigationBar.tintColor = UIColor.orange
+        self.navigationController?.tabBarItem?.setTitleTextAttributes(attr, for: UIControlState.selected)
         
         self.title = MyApp.shared.languageStringByKey("cartTitle")
     }

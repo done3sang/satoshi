@@ -12,6 +12,19 @@ import UIKit
 class MyApp {
     static var shared: MyApp = MyApp()
     
+    func isNavigationBarHidden(_ rootViewController: UIViewController?) -> Bool {
+        var result = false
+        
+        if let _ = rootViewController?.navigationController {
+            if rootViewController!.isKind(of: HomeViewController.self) ||
+                rootViewController!.isKind(of: MineViewController.self) {
+                result = true
+            }
+        }
+        
+        return result
+    }
+    
     func loadStroyboard<V>(_ nibName: String) -> V {
         let sb = UIStoryboard(name: nibName, bundle: nil)
         return sb.instantiateViewController(withIdentifier: nibName) as! V
@@ -96,10 +109,10 @@ class MyApp {
     }
     
     func gotoWebsite(_ currentViewController: UIViewController, urlLink: String, title: String) {
-        let viewController = WebsiteViewController()
+        let viewController = WebsiteViewController(urlString: urlLink)
         
         viewController.title = title
-        viewController.loadUrl(urlLink)
+        //viewController.loadUrl(urlLink)
         viewController.hidesBottomBarWhenPushed = true
         currentViewController.navigationController?.pushViewController(viewController, animated: true)
     }

@@ -11,15 +11,32 @@ import WebKit
 
 class WebsiteViewController: UIViewController {
     var webView: WKWebView!
+    var urlString: String = ""
+    
+    init(urlString: String) {
+        self.urlString = urlString
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         webView = WKWebView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+        
         self.view.addSubview(webView)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        loadUrl(urlString)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -38,6 +55,6 @@ class WebsiteViewController: UIViewController {
     }
     
     func loadUrl(_ urlString: String) {
-        webView?.load(NSURLRequest(url:NSURL.init(string:urlString)! as URL) as URLRequest)
+        webView?.load(NSURLRequest(url:NSURL(string:urlString)! as URL) as URLRequest)
     }
 }

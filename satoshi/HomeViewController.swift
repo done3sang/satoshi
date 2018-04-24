@@ -25,11 +25,11 @@ class HomeViewController: UIViewController, UISearchBarDelegate, AutoPageControl
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        self.title = MyApp.shared.languageStringByKey("homeTitle")
-        
         let attr = [NSAttributedStringKey.foregroundColor: UIColor.orange]
         tabBarItem.setTitleTextAttributes(attr, for: UIControlState.selected)
+        self.navigationController?.tabBarItem?.setTitleTextAttributes(attr, for: UIControlState.selected)
+        self.title = MyApp.shared.languageStringByKey("homeTitle")
+        
         searchBar.delegate = self
         initPageScroll()
         initMainScrollView()

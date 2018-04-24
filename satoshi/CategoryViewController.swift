@@ -19,11 +19,11 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.title = MyApp.shared.languageStringByKey("categoryTitle")
-        self.navigationController?.tabBarItem.title = MyApp.shared.languageStringByKey("categoryBarTitle")
-        
         let attr = [NSAttributedStringKey.foregroundColor: UIColor.orange]
         tabBarItem.setTitleTextAttributes(attr, for: UIControlState.selected)
+        self.navigationController?.tabBarItem?.setTitleTextAttributes(attr, for: UIControlState.selected)
+        self.title = MyApp.shared.languageStringByKey("categoryTitle")
+        self.navigationController?.tabBarItem.title = MyApp.shared.languageStringByKey("categoryBarTitle")
         
         tableView.delegate = self
         tableView.dataSource = self

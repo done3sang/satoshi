@@ -15,3 +15,15 @@
 "categoryTitle" = "商品分類";
 "cartTitle" = "購物車";
 "mineTitle" = "我的";
+"introductionTitle" = "公司簡介";
+"introductionUrl" = "http://m.gogowifi.hk/Public/content.html?ID=5";
+"contactTitle" = "聯絡我們";
+"contactUrl" = "http://m.gogowifi.hk/Public/content.html?ID=6";
+"rechargeProcedureTitle" = "充值流程";
+"rechargeProcedureUrl" = "http://m.gogowifi.hk/Public/content.html?ID=19";
+"faqTitle" = "常見問題";
+"faqUrl" = "http://m.gogowifi.hk/Public/content.html?ID=7";
+"privacyTitle" = "隱私政策";
+"privacyUrl" = "http://m.gogowifi.hk/Public/content.html?ID=9";
+"clauseTitle" = "協議條款";
+"clauseUrl" = "http://m.gogowifi.hk/Public/content.html?ID=10";

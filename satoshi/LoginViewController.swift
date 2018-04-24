@@ -22,14 +22,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        //if self.navigationController?.viewControllers.first == self
-        //self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        //self.navigationController?.isNavigationBarHidden = true
+        if MyApp.shared.isNavigationBarHidden(self.navigationController?.topViewController) {
+            self.navigationController?.isNavigationBarHidden = true
+        }
     }
     
     override func didReceiveMemoryWarning() {
