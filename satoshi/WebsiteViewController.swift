@@ -35,16 +35,11 @@ class WebsiteViewController: UIViewController {
         super.viewWillAppear(animated)
         
         loadUrl(urlString)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
         self.navigationController?.isNavigationBarHidden = false
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         
         self.navigationController?.isNavigationBarHidden = true
     }

@@ -109,12 +109,12 @@ class MyApp {
     }
     
     func gotoWebsite(_ currentViewController: UIViewController, urlLink: String, title: String) {
-        let viewController = WebsiteViewController(urlString: urlLink)
+        let vc = WebsiteViewController(urlString: urlLink)
         
-        viewController.title = title
+        vc.title = title
         //viewController.loadUrl(urlLink)
-        viewController.hidesBottomBarWhenPushed = true
-        currentViewController.navigationController?.pushViewController(viewController, animated: true)
+        vc.hidesBottomBarWhenPushed = true
+        currentViewController.navigationController?.pushViewController(vc, animated: true)
     }
     
     func checkUserLogged(_ viewController: UIViewController, showAlert: Bool = true, okFunc: (() -> Void)? = nil, cancelFunc: (() -> Void)? = nil) -> Bool {
