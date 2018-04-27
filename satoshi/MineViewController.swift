@@ -22,6 +22,11 @@ class MineViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -64,8 +69,8 @@ class MineViewController: UIViewController {
         let sb = UIStoryboard(name: nibName, bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: nibName) as! AboutViewController
         
-        self.hidesBottomBarWhenPushed = true
+        vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
-        self.hidesBottomBarWhenPushed = false
+        //vc.hidesBottomBarWhenPushed = false
     }
 }

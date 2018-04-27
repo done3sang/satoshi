@@ -35,13 +35,6 @@ class WebsiteViewController: UIViewController {
         super.viewWillAppear(animated)
         
         loadUrl(urlString)
-        self.navigationController?.isNavigationBarHidden = false
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        self.navigationController?.isNavigationBarHidden = true
     }
     
     override func didReceiveMemoryWarning() {
