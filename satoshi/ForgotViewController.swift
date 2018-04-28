@@ -14,6 +14,8 @@ class ForgotViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var againPasswordTextField: UITextField!
     @IBOutlet var getCodeButton: UIButton!
+    @IBOutlet var newPasswordButton: UIButton!
+    @IBOutlet var confirmPasswordButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,20 +49,32 @@ class ForgotViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        accountTextField.resignFirstResponder()
+        codeTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        againPasswordTextField.resignFirstResponder()
+    }
+    
     @IBAction func getCode() {
         
     }
     
     @IBAction func showPassword() {
         passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+        newPasswordButton.setImage(UIImage(named: passwordTextField.isSecureTextEntry ? "password_open": "password_close"), for: .normal)
     }
     
     @IBAction func showAgainPassword() {
         againPasswordTextField.isSecureTextEntry = !againPasswordTextField.isSecureTextEntry
+        confirmPasswordButton.setImage(UIImage(named: againPasswordTextField.isSecureTextEntry ? "password_open": "password_close"), for: .normal)
     }
     
     @IBAction func resetPassword() {
-        
+        print("resetPassword = ", accountTextField.text!, codeTextField.text!,
+              passwordTextField.text!, againPasswordTextField.text!)
     }
     
     @IBAction func gotoRegister() {
@@ -73,7 +87,7 @@ class ForgotViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let frame = textField.frame
-        let offset = frame.origin.y + frame.height - self.view.frame.height + 216
+        let offset = frame.origin.y + frame.height - self.view.frame.height + 220
         
         UIView.beginAnimations("ResizeForKeyboard", context: nil)
         UIView.setAnimationDuration(0.3)
@@ -85,6 +99,20 @@ class ForgotViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        switch textField {
+        case accountTextField:
+            codeTextField.becomeFirstResponder()
+            
+        case codeTextField:
+            passwordTextField.becomeFirstResponder()
+            
+        case passwordTextField:
+            againPasswordTextField.becomeFirstResponder()
+            
+        default:
+            resetPassword()
+        }
+        
         return true
     }
     

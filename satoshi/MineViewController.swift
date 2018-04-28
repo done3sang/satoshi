@@ -16,7 +16,7 @@ class MineViewController: UIViewController {
         let attr = [NSAttributedStringKey.foregroundColor: UIColor.orange]
         tabBarItem.setTitleTextAttributes(attr, for: UIControlState.selected)
         self.navigationController?.tabBarItem?.setTitleTextAttributes(attr, for: UIControlState.selected)
-
+        
         self.title = MyApp.shared.languageStringByKey("mineTitle")
         
         self.navigationController?.isNavigationBarHidden = true

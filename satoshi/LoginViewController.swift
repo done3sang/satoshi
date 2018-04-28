@@ -11,11 +11,13 @@ import UIKit
 class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var passwordButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        usernameTextField.delegate = self
         passwordTextField.delegate = self
     }
 
@@ -38,8 +40,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        usernameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
+    
     @IBAction func showPassword() {
         passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+        passwordButton.setImage(UIImage(named: passwordTextField.isSecureTextEntry ? "password_open": "password_close"), for: .normal)
     }
     
     @IBAction func fogetPassword() {
@@ -50,9 +60,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         MyApp.shared.gotoRegister(self)
     }
     
+    @IBAction func loginUser() {
+        print("username, password = \(usernameTextField.text!), \(passwordTextField.text!)")
+    }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let frame = textField.frame
-        let offset = frame.origin.y + 32 - self.view.frame.height - 216
+        let offset = frame.origin.y + 32 - self.view.frame.height + 216
         
         UIView.beginAnimations("ResizeForKeyboard", context: nil)
         UIView.setAnimationDuration(0.3)
@@ -64,6 +78,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        if textField == usernameTextField {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            loginUser()
+        }
+        
         return true
     }
     

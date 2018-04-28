@@ -13,6 +13,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var againPasswordTextField: UITextField!
     @IBOutlet var readButton: UIButton!
+    @IBOutlet var passwordButton: UIButton!
+    @IBOutlet var againPasswordButton: UIButton!
     
     var protocolReaded = true
     
@@ -44,16 +46,25 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        passwordTextField.resignFirstResponder()
+        againPasswordTextField.resignFirstResponder()
+    }
+    
     @IBAction func showPassword() {
         passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+        passwordButton.setImage(UIImage(named: passwordTextField.isSecureTextEntry ? "password_open": "password_close"), for: .normal)
     }
     
     @IBAction func showAgainPassword() {
         againPasswordTextField.isSecureTextEntry = !againPasswordTextField.isSecureTextEntry
+        againPasswordButton.setImage(UIImage(named: againPasswordTextField.isSecureTextEntry ? "password_open": "password_close"), for: .normal)
     }
     
     @IBAction func registerUser() {
-        
+        print("registerUser = ", accountTextField.text!, passwordTextField.text!, againPasswordTextField.text!)
     }
     
     @IBAction func readProtocol() {
@@ -71,7 +82,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let frame = textField.frame
-        let offset = frame.origin.y + frame.height - self.view.frame.height + 216
+        let offset = frame.origin.y + frame.height - self.view.frame.height + 220
         
         UIView.beginAnimations("ResizeForKeyboard", context: nil)
         UIView.setAnimationDuration(0.3)
@@ -83,6 +94,17 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        switch textField {
+        case accountTextField:
+            passwordTextField.becomeFirstResponder()
+            
+        case passwordTextField:
+            againPasswordTextField.becomeFirstResponder()
+            
+        default:
+            registerUser()
+        }
+        
         return true
     }
     

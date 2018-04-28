@@ -10,7 +10,6 @@
 		141F2BCD207F504E00DC01CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141F2BCC207F504E00DC01CB /* AppDelegate.swift */; };
 		141F2BCF207F504E00DC01CB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141F2BCE207F504E00DC01CB /* MainViewController.swift */; };
 		141F2BD2207F504E00DC01CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141F2BD0207F504E00DC01CB /* Main.storyboard */; };
-		141F2BD4207F505700DC01CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 141F2BD3207F505700DC01CB /* Assets.xcassets */; };
 		141F2BD7207F505700DC01CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141F2BD5207F505700DC01CB /* LaunchScreen.storyboard */; };
 		141F2C2A20805D7B00DC01CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141F2C2920805D7B00DC01CB /* HomeViewController.swift */; };
 		141F2C2C20805D9500DC01CB /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141F2C2B20805D9500DC01CB /* CategoryViewController.swift */; };
@@ -32,6 +31,9 @@
 		14FE0997208DBCF10020C942 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FE0995208DBCF10020C942 /* About.storyboard */; };
 		14FE0999208DCD910020C942 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE0998208DCD910020C942 /* AboutViewController.swift */; };
 		14FE099E208DE01D0020C942 /* WebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE099D208DE01D0020C942 /* WebsiteViewController.swift */; };
+		14FE09CA20944D7A0020C942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FE09C920944D7A0020C942 /* Assets.xcassets */; };
+		14FE09CC20946EE70020C942 /* HttpHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE09CB20946EE70020C942 /* HttpHelper.swift */; };
+		14FE09CE209470180020C942 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE09CD209470180020C942 /* JsonHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +41,6 @@
 		141F2BCC207F504E00DC01CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		141F2BCE207F504E00DC01CB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		141F2BD1207F504E00DC01CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		141F2BD3207F505700DC01CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		141F2BD6207F505700DC01CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		141F2BD8207F505700DC01CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		141F2C2920805D7B00DC01CB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +69,9 @@
 		14FE0996208DBCF10020C942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/About.storyboard; sourceTree = "<group>"; };
 		14FE0998208DCD910020C942 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		14FE099D208DE01D0020C942 /* WebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteViewController.swift; sourceTree = "<group>"; };
+		14FE09C920944D7A0020C942 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14FE09CB20946EE70020C942 /* HttpHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHelper.swift; sourceTree = "<group>"; };
+		14FE09CD209470180020C942 /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,12 +106,13 @@
 			children = (
 				141F2BCC207F504E00DC01CB /* AppDelegate.swift */,
 				14D8FE41208A0546000BB672 /* MyApp.swift */,
+				14FE09CF209470760020C942 /* Helper */,
 				147D7BCC208722F800C43240 /* Protocol */,
 				14F7114020872153000A556D /* Custom */,
 				14F7113F208720E7000A556D /* Storyboard */,
 				14F7113E208720B0000A556D /* Tool */,
 				14F7113C20872079000A556D /* Controller */,
-				141F2BD3207F505700DC01CB /* Assets.xcassets */,
+				14FE09C920944D7A0020C942 /* Assets.xcassets */,
 				141F2BD8207F505700DC01CB /* Info.plist */,
 				14FE0993208D86800020C942 /* Localizable.strings */,
 			);
@@ -168,6 +173,15 @@
 				14DA99E12080AFEC00D3BDDD /* AutoPageScroll.swift */,
 			);
 			name = Custom;
+			sourceTree = "<group>";
+		};
+		14FE09CF209470760020C942 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				14FE09CB20946EE70020C942 /* HttpHelper.swift */,
+				14FE09CD209470180020C942 /* JsonHelper.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,11 +245,11 @@
 				14D8FE1B20887BE7000BB672 /* Protocol.storyboard in Resources */,
 				14F711382086F68B000A556D /* Login.storyboard in Resources */,
 				141F2BD7207F505700DC01CB /* LaunchScreen.storyboard in Resources */,
-				141F2BD4207F505700DC01CB /* Assets.xcassets in Resources */,
 				141F2BD2207F504E00DC01CB /* Main.storyboard in Resources */,
 				14FE0997208DBCF10020C942 /* About.storyboard in Resources */,
 				14FE0991208D86800020C942 /* Localizable.strings in Resources */,
 				14D8FE2320888113000BB672 /* Forgot.storyboard in Resources */,
+				14FE09CA20944D7A0020C942 /* Assets.xcassets in Resources */,
 				14D8FE1620885909000BB672 /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,12 +270,14 @@
 				14D8FE1D20887D24000BB672 /* ProtocolViewController.swift in Sources */,
 				14DA99E22080AFEC00D3BDDD /* AutoPageScroll.swift in Sources */,
 				14FE099E208DE01D0020C942 /* WebsiteViewController.swift in Sources */,
+				14FE09CE209470180020C942 /* JsonHelper.swift in Sources */,
 				147D7BCE2087231C00C43240 /* ProtocolUser.swift in Sources */,
 				14D8FE42208A0546000BB672 /* MyApp.swift in Sources */,
 				141F2BCD207F504E00DC01CB /* AppDelegate.swift in Sources */,
 				14D3714D2084B3C20012670F /* Utility.swift in Sources */,
 				141F2C2A20805D7B00DC01CB /* HomeViewController.swift in Sources */,
 				141F2C2E20805DA500DC01CB /* CartViewController.swift in Sources */,
+				14FE09CC20946EE70020C942 /* HttpHelper.swift in Sources */,
 				141F2C3020805DAF00DC01CB /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

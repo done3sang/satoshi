@@ -39,7 +39,7 @@
                                 <rect key="frame" x="61" y="228" width="298" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="username"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="username"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密碼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxI-0D-Rfc" userLabel="PasswordLabel">
                                 <rect key="frame" x="16" y="283" width="35" height="21"/>
@@ -51,13 +51,17 @@
                                 <rect key="frame" x="61" y="278" width="298" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFV-m9-rrz" userLabel="PasswordSwitchButton">
-                                <rect key="frame" x="312" y="278" width="47" height="30"/>
-                                <state key="normal" title="Switch"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFV-m9-rrz" userLabel="PasswordSwitchButton">
+                                <rect key="frame" x="327" y="278" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="52O-FO-QKe"/>
+                                    <constraint firstAttribute="height" constant="30" id="Qq3-fA-aWE"/>
+                                </constraints>
+                                <state key="normal" image="password_open"/>
                                 <connections>
-                                    <action selector="showPassword" destination="37K-V3-eLb" eventType="touchUpInside" id="neD-hO-x7P"/>
+                                    <action selector="showPassword" destination="37K-V3-eLb" eventType="touchUpInside" id="4RV-V3-oyS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdG-NY-iN0" userLabel="LoginButton">
@@ -87,7 +91,6 @@
                         <constraints>
                             <constraint firstItem="kFV-m9-rrz" firstAttribute="top" secondItem="HGI-WU-uQH" secondAttribute="top" id="0br-PE-mAK"/>
                             <constraint firstItem="RHo-xQ-Q2L" firstAttribute="top" secondItem="Pz3-ZB-BSB" secondAttribute="top" constant="25" id="2jc-Rw-daX"/>
-                            <constraint firstItem="kFV-m9-rrz" firstAttribute="height" secondItem="HGI-WU-uQH" secondAttribute="height" id="3hd-43-nq0"/>
                             <constraint firstItem="kFV-m9-rrz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Kdr-8d-9Yp" secondAttribute="leading" constant="20" symbolic="YES" id="5E6-me-ow1"/>
                             <constraint firstItem="RxI-0D-Rfc" firstAttribute="top" secondItem="eQQ-sU-OG4" secondAttribute="bottom" constant="25" id="5Fb-Nb-9LO"/>
                             <constraint firstItem="Tzt-hg-OJF" firstAttribute="left" secondItem="Kdr-8d-9Yp" secondAttribute="leftMargin" id="84u-T9-kvE"/>
@@ -98,7 +101,8 @@
                             <constraint firstItem="FPu-3w-lMy" firstAttribute="left" secondItem="Kdr-8d-9Yp" secondAttribute="leftMargin" id="KDI-K1-Rz9"/>
                             <constraint firstItem="RHo-xQ-Q2L" firstAttribute="centerX" secondItem="Kdr-8d-9Yp" secondAttribute="centerX" id="KUZ-Uk-UWD"/>
                             <constraint firstItem="XIY-n6-Za0" firstAttribute="top" secondItem="rdG-NY-iN0" secondAttribute="bottom" constant="25" id="Lnx-lD-umH"/>
-                            <constraint firstItem="kFV-m9-rrz" firstAttribute="trailing" secondItem="HGI-WU-uQH" secondAttribute="trailing" id="N6J-m4-tMK"/>
+                            <constraint firstItem="kFV-m9-rrz" firstAttribute="height" secondItem="HGI-WU-uQH" secondAttribute="height" id="Mnp-tg-hjb"/>
+                            <constraint firstItem="kFV-m9-rrz" firstAttribute="trailing" secondItem="HGI-WU-uQH" secondAttribute="trailing" constant="-2" id="N6J-m4-tMK"/>
                             <constraint firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="Tzt-hg-OJF" secondAttribute="trailing" id="OAh-wJ-WJd"/>
                             <constraint firstItem="XIY-n6-Za0" firstAttribute="right" secondItem="Kdr-8d-9Yp" secondAttribute="rightMargin" id="OJU-ZZ-cQk"/>
                             <constraint firstItem="rdG-NY-iN0" firstAttribute="centerX" secondItem="Kdr-8d-9Yp" secondAttribute="centerX" id="T3M-PU-VVW"/>
@@ -117,6 +121,7 @@
                         <viewLayoutGuide key="safeArea" id="Pz3-ZB-BSB"/>
                     </view>
                     <connections>
+                        <outlet property="passwordButton" destination="kFV-m9-rrz" id="3Tq-C2-BKS"/>
                         <outlet property="passwordTextField" destination="HGI-WU-uQH" id="RCh-bc-oFQ"/>
                         <outlet property="usernameTextField" destination="eQQ-sU-OG4" id="oyO-Qr-7yI"/>
                     </connections>
@@ -128,5 +133,6 @@
     </scenes>
     <resources>
         <image name="logo" width="112" height="111"/>
+        <image name="password_open" width="100" height="100"/>
     </resources>
 </document>
